@@ -5,7 +5,7 @@ const db = require('../config/db');
 
 router.get('/', async (req, res) => {
     try {
-        const resp = await db.sendQuery('SELECT * FROM Posts');
+        const resp = await db.sendQuery('SELECT id, Title FROM Posts');
         return res.json({ status: 200, data: resp });
     }
     catch(err) {
