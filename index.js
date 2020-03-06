@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const helmet = require('helmet');
-const fs = require('fs');
+const db = require('./config/db');
+
+db.setConnection(require('./config/dbProps'));
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: false }));

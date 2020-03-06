@@ -1,9 +1,11 @@
 const fs = require('fs');
-const globals = require('./Globals');
+
+const loginLogs = './Logs/login.log';
+const serverLogs = './Logs/server.log';
 
 const loginLog = (log) => {
     log += '\n';
-    fs.appendFile(globals.loginLogs, log, 'utf-8', (err) => {
+    fs.appendFile(loginLogs, log, 'utf-8', (err) => {
         if(err)
             console.log(`[Error:loginLog]: ${err}`);
     });
@@ -11,7 +13,7 @@ const loginLog = (log) => {
 
 const serverLog = (log) => {
     log += '\n';
-    fs.appendFile(globals.serverLogs, log, 'utf-8', (err) => {
+    fs.appendFile(serverLogs, log, 'utf-8', (err) => {
         if(err)
             console.log(`[Error:serverLog]: ${err}`);
     });
