@@ -12,16 +12,16 @@ const sendQuery = (sql) => {
     return new Promise((resolve, reject) => {
         _connection.getConnection((err, connection) => {
             if(err) {
-                const nerr = new Error(`[ERROR:getConnection]: ${err}`);
-                reject(nerr);
+                const date = new Date();
+                logger.serverLog(`[ERROR:sendQuery]: ${err} : ${date.toString()}`);
+                reject(`[ERROR:sendQuery]: ${err}`);
             }
             else {
                 connection.query(sql, (err, result) => {
                     if(err) {
                         const date = new Date();
-                        logger.serverLog(`[ERROR:sendQuiery]: ${err} : ${date.toString()}`);
-                        const nerr = new Error(`[ERROR:sendQuery]: ${err}`);
-                        reject(nerr);
+                        logger.serverLog(`[ERROR:sendQuery]: ${err} : ${date.toString()}`);
+                        reject(`[ERROR:sendQuery]: ${err}`);
                     }
                     else {
 		                connection.release();
