@@ -3,7 +3,6 @@ const logger = require('./logger');
 
 let _connection;
 
-
 const setConnection = (options) => {
     _connection = MySql.createPool(options);
 }

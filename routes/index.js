@@ -3,10 +3,12 @@ const router = express.Router();
 const db = require('../config/db');
 
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
+    const { id } = req.params;
+
     try {
         const resp = await db.sendQuery('SELECT id, Title FROM Posts');
-        return res.json({ status: 200, data: resp });
+        return res.json({ status: 200, data: id });
     }
     catch(err) {
         console.log(`ERROR: ${err}`);
