@@ -13,14 +13,14 @@ const sendQuery = (sql) => {
             if(err) {
                 const date = new Date();
                 logger.serverLog(`[ERROR:sendQuery]: ${err} : ${date.toString()}`);
-                reject(`[ERROR:sendQuery]: ${err}`);
+                reject(err);
             }
             else {
                 connection.query(sql, (err, result) => {
                     if(err) {
                         const date = new Date();
                         logger.serverLog(`[ERROR:sendQuery]: ${err} : ${date.toString()}`);
-                        reject(`[ERROR:sendQuery]: ${err}`);
+                        reject(err);
                     }
                     else {
 		                connection.release();
