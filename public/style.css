@@ -8,3 +8,13 @@
     min-height: 100vh;
     background: yellow;
 }
+
+a {
+    text-decoration: none;
+    background: blue;
+    padding: .2rem 1rem;
+    font-size: 1.5rem;
+    color: black;
+    border: none;
+    border-radius: 20px;
+}
