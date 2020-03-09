@@ -27,7 +27,7 @@ router.get('/pass/:passwd', async (req, res) => {
 });
 
 router.get('/pass', (req, res) => {
-    res.json({ status: 200, data: 'No data' });
+    res.render('login', { user_name: req.sessionID });
 });
 
 module.exports = router;

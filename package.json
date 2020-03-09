@@ -12,7 +12,9 @@
   "dependencies": {
     "bcrypt": "^4.0.1",
     "cors": "^2.8.5",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.17.0",
     "helmet": "^3.21.3",
     "jsonwebtoken": "^8.5.1",
