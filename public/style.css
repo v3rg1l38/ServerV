@@ -24,6 +24,7 @@ a {
 
 form {
     display: inline-block;
+    margin-left: 2rem;
 }
 
 form input[type="text"], form input[type="password"] {
@@ -32,6 +33,7 @@ form input[type="text"], form input[type="password"] {
     height: 2rem;
     border: none;
     border-bottom: 2px solid blue;
+    width: 20rem;
 }
 
 form input[type="submit"] {
