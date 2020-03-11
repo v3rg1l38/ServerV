@@ -27,18 +27,65 @@ form {
     align-self: center;
 }
 
-form input[type="text"], form input[type="password"] {
+.inputText {
     display: block;
     margin: 1.5rem 0;
     height: 2rem;
     border: none;
     border-bottom: 2px solid blue;
     width: 20rem;
+    background: transparent;
+    font-size: 1.5rem;
 }
 
-form input[type="submit"] {
+.inputText:valid {
+    border-bottom: 2px solid rgb(19, 231, 19);
+}
+
+.inputBtn {
     border: none;
-    background: lightblue;
-    padding: 1rem 2rem;
+    background: rgb(19, 128, 165);
+    padding: .5rem 2rem;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.inputBtn:hover, .inputBtn:focus {
+    background: rgb(19, 231, 19);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    padding: 1rem 0;
+}
+
+nav h1 {
+    color: white;
+    margin-left: 2rem;
+    pointer-events: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    border-bottom: 2px solid green;
+    font-size: 1.5rem;
+}
+
+body {
+    background: grey;
+}
+
+.formBlack {
+    background: black;
+    padding: 6rem;
+    background: rgba(0, 0, 0, .6);
     border-radius: 20px;
 }

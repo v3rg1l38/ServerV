@@ -1,8 +1,9 @@
 <h1>User ID: <%= user_name %> </h1>
 <p>Hello to my new application!</p>
 
-<form>
-    <input type="text" name="uname" placeholder="Username" value="<%= user_name %>" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" value="Submit">
+<form class="formBlack" method="POST" action="/posts/login">
+    <input class="inputText" type="text" name="uname" placeholder="Username" value="<%= user_name %>" required>
+    <input class="inputText" type="password" name="password" placeholder="Password" required>
+    <input class="inputBtn" type="submit" value="Submit">
 </form>
+

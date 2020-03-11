@@ -30,4 +30,11 @@ router.get('/pass', (req, res) => {
     res.render('login', { user_name: req.sessionID });
 });
 
+router.post('/login', (req, res) => {
+    const { uname, password } = req.body;
+    console.log('uname: ' + uname);
+    console.log('password:' + password);
+    res.send('Ok');
+});
+
 module.exports = router;
