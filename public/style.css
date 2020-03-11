@@ -24,7 +24,7 @@ a {
 
 form {
     display: inline-block;
-    margin-left: 2rem;
+    align-self: center;
 }
 
 form input[type="text"], form input[type="password"] {
