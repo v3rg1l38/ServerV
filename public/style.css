@@ -4,17 +4,39 @@
     outline: none;
 }
 
-.box {
-    min-height: 100vh;
-    background: yellow;
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #333333;
 }
 
 a {
     text-decoration: none;
-    background: blue;
-    padding: .2rem 1rem;
-    font-size: 1.5rem;
-    color: black;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
+form {
+    display: inline-block;
+}
+
+form input[type="text"], form input[type="password"] {
+    display: block;
+    margin: 1.5rem 0;
+    height: 2rem;
     border: none;
+    border-bottom: 2px solid blue;
+}
+
+form input[type="submit"] {
+    border: none;
+    background: lightblue;
+    padding: 1rem 2rem;
     border-radius: 20px;
 }
