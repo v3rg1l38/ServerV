@@ -3,17 +3,6 @@ const router = express.Router();
 const db = require('../config/db');
 const bcrypt = require('bcrypt');
 
-router.get('/', async (req, res) => {
-    try {
-        const resp = await db.sendQuery('SELECT id, Title FROM Posts');
-        return res.json({ status: 200, data: resp });
-    }
-    catch(err) {
-        console.log(`${err}`);
-        res.json({ status: 500, message: `${err}` });
-    }
-});
-
 router.get('/pass/:passwd', async (req, res) => {
     const { passwd } = req.params;
 
@@ -26,8 +15,12 @@ router.get('/pass/:passwd', async (req, res) => {
     }
 });
 
-router.get('/pass', (req, res) => {
+router.get('/', (req, res) => {
     res.render('login', { user_name: req.sessionID });
+});
+
+router.get('/register', (req, res) => {
+    res.render('register');
 });
 
 router.post('/login', (req, res) => {
