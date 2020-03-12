@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing EJS</title>
+    <title>ServerV</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
@@ -12,9 +12,11 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Bugs</a></li>
-            <li><a href="#">Log In</a></li>
+            <% if(!loggedIn) { %>
+                <li><a href="#">Log In</a></li>
+            <% } %>
             <% if(loggedIn) { %>
-                <li><a href="#">Log Out</a></li>
+                <li><span style="color: blue; pointer-events: none;">Hello <%= username %></span></li>
             <% } %>
         </ul>
     </nav>
