@@ -24,7 +24,6 @@ a {
 
 form {
     display: inline-block;
-    align-self: center;
 }
 
 .inputText {
@@ -62,6 +61,10 @@ nav {
     padding: 1rem 0;
 }
 
+nav ul {
+    margin-right: 2rem;
+}
+
 nav h1 {
     color: white;
     margin-left: 2rem;
@@ -77,6 +80,12 @@ nav ul li a {
     color: white;
     border-bottom: 2px solid green;
     font-size: 1.5rem;
+    transition: all .5s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 104, 223);
+    border-bottom: 2px solid rgb(0, 104, 223);
 }
 
 body {
@@ -88,4 +97,39 @@ body {
     padding: 6rem;
     background: rgba(0, 0, 0, .6);
     border-radius: 20px;
+}
+
+#nav-logo {
+    color: red;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    min-height: 90vh;
+}
+
+.formRow {
+    margin: 2.5rem 0;
+}
+
+.formRow input ~ label {
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: -4rem;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+.formRow input:focus ~ label {
+    margin-top: -5.5rem;
+    font-size: 1.2rem;
+}
+
+.formRow input:valid ~ label {
+    margin-top: -5.5rem;
+    font-size: 1.2rem;
 }
