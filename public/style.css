@@ -121,7 +121,6 @@ body {
     position: absolute;
     margin-top: -4rem;
     pointer-events: none;
-    transition: all .5s ease-in-out;
 }
 
 .formRow input:focus ~ label {
