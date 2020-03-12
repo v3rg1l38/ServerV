@@ -80,7 +80,6 @@ nav ul li a {
     color: white;
     border-bottom: 2px solid green;
     font-size: 1.5rem;
-    transition: all .5s ease-in-out;
 }
 
 nav ul li a:hover {
