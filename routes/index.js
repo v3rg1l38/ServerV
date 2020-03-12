@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render('login', { user_name: req.sessionID });
+    res.render('login', { loggedIn: false });
 });
 
 router.get('/register', (req, res) => {
