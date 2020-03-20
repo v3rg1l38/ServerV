@@ -13,7 +13,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Bugs</a></li>
             <% if(!loggedIn) { %>
-                <li><a href="#">Log In</a></li>
+                <li><a href="/login">Log In</a></li>
             <% } %>
             <% if(loggedIn) { %>
                 <li><span style="color: blue; pointer-events: none;">Hello <%= username %></span></li>
