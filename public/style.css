@@ -37,6 +37,10 @@ form {
     font-size: 1.5rem;
 }
 
+.inputText:focus {
+    border-bottom: 2px solid red;
+}
+
 .inputText:valid {
     border-bottom: 2px solid rgb(19, 231, 19);
 }
