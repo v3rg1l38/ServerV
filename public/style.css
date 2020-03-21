@@ -82,9 +82,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    border-bottom: 2px solid green;
     font-size: 1.5rem;
-    padding-bottom: 1rem;
 }
 
 nav ul li a:hover {

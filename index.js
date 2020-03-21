@@ -8,7 +8,7 @@ const db = require('./config/db');
 
 db.setConnection(require('./config/dbProps'));
 
-app.use(session( {
+app.use(session({
     secret: 'v3rg1l38',
     resave: true,
     saveUninitialized: true
@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/', require('./routes/index'));
+app.use('**', require('./routes/404'));
 
 const PORT = process.env.PORT || 5000;
 
