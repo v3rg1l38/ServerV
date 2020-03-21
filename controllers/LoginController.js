@@ -10,17 +10,17 @@ const isLoggedIn = async (req, res, next) => {
         if(result.length > 0) {
             req.isLoggedIn = true;
             req.uname   = result[0].sid;
-            return next();
+            next();
         }
         else {
             req.isLoggedIn = false;
-            return next();
+            next();
         }
     }
     catch(err) {
         const date = new Date();
         logger.serverLog(`${err} : ${date.toString()}`);
-        return res.json({ message: err});
+        res.json({ message: err});
     }
 }
 

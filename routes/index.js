@@ -2,17 +2,11 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
 const bcrypt = require('bcrypt');
-const loginCheck = require('../controllers/LoginController').isLoggedIn;
-const login = require('../controllers/LoginController').login;
 
-router.get('/', loginCheck, async (req, res) => {
-    const user = {
-        username: 'v3rg1l38',
-        sessionID: req.sessionID
-    };
+router.get('/', async (req, res) => {
+    const { isLoggedIn, uname } = req;
 
-    await login(user);
-    res.render('login', { loggedIn: req.isLoggedIn, username: req.uname});
+    res.render('index', { loggedIn:  isLoggedIn, username: uname });
 });
 
 router.get('/login', (req, res) => {

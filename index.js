@@ -5,6 +5,7 @@ const expressLayouts = require('express-ejs-layouts');
 const cors = require('cors');
 const helmet = require('helmet');
 const db = require('./config/db');
+const loginCheck = require('./controllers/LoginController').isLoggedIn;
 
 db.setConnection(require('./config/dbProps'));
 
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
+app.use(loginCheck);
 app.use('/', require('./routes/index'));
 app.use('**', require('./routes/404'));
 
