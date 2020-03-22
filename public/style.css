@@ -1,136 +1,150 @@
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 p {
-    font-size: 1.5rem;
-    color: #333333;
+  font-size: 1.5rem;
+  color: #333333;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    display: flex;
-    flex-flow: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 form {
-    display: inline-block;
+  display: inline-block;
 }
 
 .inputText {
-    display: block;
-    margin: 1.5rem 0;
-    height: 2rem;
-    border: none;
-    border-bottom: 2px solid blue;
-    width: 20rem;
-    background: transparent;
-    font-size: 1.5rem;
+  display: block;
+  margin: 1.5rem 0;
+  height: 2rem;
+  border: none;
+  border-bottom: 2px solid blue;
+  width: 20rem;
+  background: transparent;
+  font-size: 1.5rem;
 }
 
 .inputText:focus {
-    border-bottom: 2px solid red;
+  border-bottom: 2px solid red;
 }
 
 .inputText:valid {
-    border-bottom: 2px solid rgb(19, 231, 19);
+  border-bottom: 2px solid #13e713;
 }
 
 .inputBtn {
-    border: none;
-    background: rgb(19, 128, 165);
-    padding: .5rem 2rem;
-    border-radius: 20px;
-    width: 100%;
-    font-size: 1.2rem;
+  border: none;
+  background: #1380a5;
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 1.2rem;
 }
 
 .inputBtn:hover, .inputBtn:focus {
-    background: rgb(19, 231, 19);
+  background: #13e713;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    background: black;
-    padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: black;
+  padding: 1rem 0;
 }
 
 nav ul {
-    margin-right: 2rem;
+  margin-right: 2rem;
 }
 
 nav h1 {
-    color: white;
-    margin-left: 2rem;
-    pointer-events: none;
+  color: white;
+  margin-left: 2rem;
+  pointer-events: none;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1.5rem;
+  display: inline;
+  margin: 0 1.5rem;
 }
 
 nav ul li a {
-    color: white;
-    font-size: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
 }
 
 nav ul li a:hover {
-    color: rgb(0, 104, 223);
-    border-bottom: 2px solid rgb(0, 104, 223);
+  color: #0068df;
+  border-bottom: 2px solid #0068df;
 }
 
 body {
-    background: grey;
+  background: grey;
 }
 
 .formBlack {
-    background: black;
-    padding: 6rem;
-    background: rgba(0, 0, 0, .6);
-    border-radius: 20px;
+  background: black;
+  padding: 6rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
 }
 
 #nav-logo {
-    color: red;
+  color: red;
 }
 
 .center {
-    justify-content: center;
-    align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box {
-    min-height: 90vh;
+  min-height: 90vh;
 }
 
 .formRow {
-    margin: 2.5rem 0;
+  margin: 2.5rem 0;
 }
 
 .formRow input ~ label {
-    font-size: 1.5rem;
-    position: absolute;
-    margin-top: -4rem;
-    pointer-events: none;
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: -4rem;
+  pointer-events: none;
 }
 
 .formRow input:focus ~ label {
-    margin-top: -5.5rem;
-    font-size: 1.2rem;
+  margin-top: -5.5rem;
+  font-size: 1.2rem;
 }
 
 .formRow input:valid ~ label {
-    margin-top: -5.5rem;
-    font-size: 1.2rem;
+  margin-top: -5.5rem;
+  font-size: 1.2rem;
 }
+/*# sourceMappingURL=style.css.map */
