@@ -1,20 +1,21 @@
 <div class="container center box">
-    <form class="formBlack">
+    <%- include ('./partials/messages') %>
+    <form class="formBlack" method="POST" action="/register">
         <h1 style="text-align: center; color: white;">Register form</h1>
         <div class="formRow">
-            <input class="inputText" type="text" name="username" required>
+            <input class="inputText" type="text" name="user_name" required>
             <label>Username</label>
         </div>
-        <div class="formRow">
-            <input class="inputText" type="text" name="email" required>
+        <div class="formRow block">
+            <input class="inputText" type="text" name="user_mail" required>
             <label>E-mail</label>
         </div>
-        <div class="formRow">
-            <input class="inputText" type="password" name="password" required>
+        <div class="formRow block">
+            <input class="inputText" type="password" name="user_password" required>
             <label>Password</label>
         </div>
-        <div class="formRow">
-            <input class="inputText" type="password" name="password1" required>
+        <div class="formRow block">
+            <input class="inputText" type="password" name="user_password1" required>
             <label>Repeat Password</label>
         </div>
         <input class="inputBtn" type="submit" value="Register">

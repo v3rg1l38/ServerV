@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db');
-const bcrypt = require('bcrypt');
+const loginSys = require('../controllers/LoginController');
 
 router.get('/', async (req, res) => {
     const { isLoggedIn, uname } = req;
@@ -17,11 +16,17 @@ router.get('/register', (req, res) => {
     res.render('register', { loggedIn: false });
 });
 
-router.post('/login', (req, res) => {
-    const { uname, password } = req.body;
-    console.log('uname: ' + uname);
-    console.log('password: ' + password);
-    res.redirect('/login');
+router.post('/register', async (req, res) => {
+    const { user_name, 
+        user_password,
+        user_password1,
+        user_mail
+     } = req.body;
+
+     if(user_password !== user_password1)
+        res.render('register', { loggedIn: req.isLoggedIn, rspMsg: 'Passwords do not match' });
+    else
+        res.render('register', { loggedIn: req.isLoggedIn, rspMsg: 'You have been registered' });
 });
 
 module.exports = router;
