@@ -226,18 +226,20 @@ body {
     background: lightcoral;
     padding: .5rem 2rem;
     margin-bottom: 2rem;
-    display: inline-block;
+    display: flex;
     width: 40%;
 
     h1 {
         font-weight: 300;
         font-size: 2rem;
-        display: inline;
+        max-width: 95%;
+        width: 100%;
     }
     
     p {
         cursor: pointer;
-        display: inline;
+        max-width: 5%;
+        width: 100%;
         margin-left: 5rem;
     }
 }
