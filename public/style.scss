@@ -146,3 +146,49 @@ body {
 .inline {
     display: inline;
 }
+
+.note-box {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid lightcoral;
+    max-width: 25%;
+
+    &-title {
+        background: brown;
+        text-align: center;
+    }
+
+    &-row {
+        border: 1px solid lightcoral;
+        display: flex;
+
+        p {
+            margin-left: 1.5rem;
+        }
+
+        i {
+            border-right: 1px solid lightcoral;
+            padding: 0 1rem;
+        }
+    }
+
+    &-row:nth-child(odd) {
+        background: lightcyan;
+
+        &:hover {
+            background-color: greenyellow;
+        }
+    }
+
+    &-row:nth-child(even) {
+        background: lightgreen;
+
+        &:hover {
+            background-color: greenyellow;
+        }
+    }
+
+    &-list {
+        list-style: none;
+    }
+}

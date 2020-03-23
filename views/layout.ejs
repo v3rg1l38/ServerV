@@ -16,7 +16,8 @@
                 <li><a href="/login">Log In</a></li>
             <% } %>
             <% if(typeof loggedIn !== 'undefined' && loggedIn) { %>
-                <li><span style="color: blue; pointer-events: none;">Hello <%= username %></span></li>
+                <li><a href="/logout">Log Out</a></li>
+                <li><span style="color: blue; pointer-events: none;"><%= username %></span></li>
             <% } %>
         </ul>
     </nav>

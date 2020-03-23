@@ -159,4 +159,57 @@ body {
 .inline {
   display: inline;
 }
+
+.note-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border: 2px solid lightcoral;
+  max-width: 25%;
+}
+
+.note-box-title {
+  background: brown;
+  text-align: center;
+}
+
+.note-box-row {
+  border: 1px solid lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.note-box-row p {
+  margin-left: 1.5rem;
+}
+
+.note-box-row i {
+  border-right: 1px solid lightcoral;
+  padding: 0 1rem;
+}
+
+.note-box-row:nth-child(odd) {
+  background: lightcyan;
+}
+
+.note-box-row:nth-child(odd):hover {
+  background-color: greenyellow;
+}
+
+.note-box-row:nth-child(even) {
+  background: lightgreen;
+}
+
+.note-box-row:nth-child(even):hover {
+  background-color: greenyellow;
+}
+
+.note-box-list {
+  list-style: none;
+}
 /*# sourceMappingURL=style.css.map */

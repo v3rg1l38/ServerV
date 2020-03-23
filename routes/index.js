@@ -6,11 +6,15 @@ const logger = require('../config/logger');
 router.get('/', async (req, res) => {
     const { isLoggedIn, uname } = req;
 
-    res.render('index');
+    res.render('index', { loggedIn: isLoggedIn, username: uname});
 });
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    const { isLoggedIn } = req;
+    if(!isLoggedIn)
+        res.render('login');
+    else
+        res.redirect('/');
 });
 
 router.get('/register', (req, res) => {
