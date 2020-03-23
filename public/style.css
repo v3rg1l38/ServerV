@@ -195,15 +195,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .note-box-row p {
   margin-left: 1.5rem;
+  max-width: 60%;
+  width: 100%;
 }
 
 .note-box-row i {
   border-right: 1px solid lightcoral;
   padding: 0 1rem;
+  max-width: 10%;
+  width: 100%;
 }
 
 .note-box-row a {
@@ -212,6 +219,13 @@ body {
   display: flex;
   width: 100%;
   text-decoration: none;
+}
+
+.note-box-row span {
+  padding: 0 1rem;
+  max-width: 15%;
+  width: 100%;
+  border-left: 1px solid lightcoral;
 }
 
 .note-box-row:nth-child(odd) {
