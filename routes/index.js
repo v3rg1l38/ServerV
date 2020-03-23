@@ -2,22 +2,17 @@ const express = require('express');
 const router = express.Router();
 const loginSys = require('../controllers/LoginController');
 const logger = require('../config/logger');
+const ticketSystem = require('../controllers/TicketController');
 
 router.get('/', async (req, res) => {
-    const { isLoggedIn, uname } = req;
+    const { isLoggedIn, uname, uid } = req;
 
-    if(isLoggedIn)
+    if(isLoggedIn) {
+        const tickets = await ticketSystem.getTickets(uid);
+
         res.render('index', { loggedIn: isLoggedIn, username: uname,
-            tickets: [
-                { ticket_title: 'Proba' },
-                { ticket_title: 'Proba 1'},
-                { ticket_title: 'Proba 2'},
-                { ticket_title: 'Proba 3'},
-                { ticket_title: 'Proba 4'},
-                { ticket_title: 'Proba 5'},
-                { ticket_title: 'Proba 6'},
-                { ticket_title: 'Proba 7'}
-            ] });
+            tickets });
+    }
     else
         res.redirect('/login');
 });

@@ -13,6 +13,7 @@ const isLoggedIn = async (req, res, next) => {
         if(result.length > 0) {
             req.isLoggedIn = true;
             req.uname   = result[0].sid;
+            req.uid = result[0].uid;
             next();
         }
         else {
@@ -83,8 +84,13 @@ const register = async (userInfo) => {
         return false;
 
     try {
-        const hashedPassword = await bcrypt.hash(user_password, salt_rounds);
         const clear_user_name = user_name.replace(/[\'\\]/g, '');
+        const userExist = await db.sendQuery(`SELECT user_id FROM Users WHERE user_name = '${clear_user_name}'`);
+
+        if(userExist.length > 0)
+            return false;
+
+        const hashedPassword = await bcrypt.hash(user_password, salt_rounds);
         await db.sendQuery(`INSERT INTO Users (user_name, user_mail, user_password)
         VALUES (
             '${clear_user_name}', '${user_mail}', '${hashedPassword}'

@@ -4,7 +4,7 @@
         <ul class="note-box-list">
             <% if(typeof tickets !== 'undefined') { %>
                 <% tickets.forEach(el => { %>
-                 <li class="note-box-row"><a href="#"><i>Icon</i><p><%= el.ticket_title %></p><span>Owner</span></a></li>
+                 <li class="note-box-row"><a href="#"><i>Icon</i><p><%= el.ticket_title %></p><span><%= el.user_name %></span></a></li>
                 <% }); %>
             <% } %>
         </ul>
