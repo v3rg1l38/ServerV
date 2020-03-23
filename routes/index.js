@@ -25,7 +25,7 @@ router.post('/register', async (req, res) => {
      } = req.body;
 
      if(user_password !== user_password1)
-        res.render('register', { loggedIn: req.isLoggedIn, rspMsg: 'Passwords do not match' });
+        res.render('register', { rspMsg: 'Passwords do not match' });
     else {
         const userInfo = {
             user_name,
@@ -37,14 +37,14 @@ router.post('/register', async (req, res) => {
             const success = await loginSys.register(userInfo);
 
             if(success)
-                res.render('register', { loggedIn: false, rspMsg: 'You have been successfully registered!' });
+                res.render('register', { rspMsg: 'You have been successfully registered!' });
             else
-                res.render('register', { loggedIn: false, rspMsg: 'Something went wrong' });
+                res.render('register', { rspMsg: 'Something went wrong' });
         }
         catch(err) {
             const date = new Date();
             logger.serverLog(`${err} : ${date.toString()}`);
-            res.render('register', { loggedIn: false, rspMsg: `${err}` });
+            res.render('register', { rspMsg: `${err}` });
         }
     }
 });
