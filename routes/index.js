@@ -10,11 +10,11 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render('login', { loggedIn: false, username: 'v3rg1l' });
+    res.render('login');
 });
 
 router.get('/register', (req, res) => {
-    res.render('register', { loggedIn: req.isLoggedIn, username: req.username });
+    res.render('register');
 });
 
 router.post('/register', async (req, res) => {
