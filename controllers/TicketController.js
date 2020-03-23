@@ -23,6 +23,33 @@ const getTickets = async (userID) => {
     }
 }
 
+const addTicket = async (ticketInfo) => {
+    if(!ticketInfo)
+        return false;
+
+    try {
+        const { ticket_title, ticket_body, uid } = ticketInfo;
+        const clear_title = ticket_title.replace(/[\'\\]/g, '');
+        const clear_body = ticket_body.replace(/[\'\\]/g, '');
+
+        await db.sendQuery(`
+        INSERT INTO Ticket (ticket_owner, ticket_title, ticket_body)
+        VALUES (
+            ${uid},
+            '${clear_title}',
+            '${clear_body}'
+        )`);
+
+        return true;
+    }
+    catch(err) {
+        const date = new Date();
+        logger.serverLog(`${err} : ${date.toString()}`);
+        return false;
+    }
+}
+
 module.exports = {
-    getTickets
+    getTickets,
+    addTicket
 };
