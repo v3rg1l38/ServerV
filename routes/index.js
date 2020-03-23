@@ -7,7 +7,17 @@ router.get('/', async (req, res) => {
     const { isLoggedIn, uname } = req;
 
     if(isLoggedIn)
-        res.render('index', { loggedIn: isLoggedIn, username: uname});
+        res.render('index', { loggedIn: isLoggedIn, username: uname,
+            tickets: [
+                { ticket_title: 'Proba' },
+                { ticket_title: 'Proba 1'},
+                { ticket_title: 'Proba 2'},
+                { ticket_title: 'Proba 3'},
+                { ticket_title: 'Proba 4'},
+                { ticket_title: 'Proba 5'},
+                { ticket_title: 'Proba 6'},
+                { ticket_title: 'Proba 7'}
+            ] });
     else
         res.redirect('/login');
 });
