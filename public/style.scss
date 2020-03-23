@@ -27,7 +27,7 @@ form {
 }
 
 .inputText {
-    display: block;
+    display: inline-block;
     margin: 1.5rem 0;
     height: 2rem;
     border: none;
@@ -35,6 +35,10 @@ form {
     width: 20rem;
     background: transparent;
     font-size: 1.5rem;
+}
+
+.inputText ~ label {
+    display: block;
 }
 
 .inputText:focus {
@@ -115,7 +119,8 @@ body {
 }
 
 .formRow {
-    margin: 2.5rem 0;
+    margin: 1.5rem 0;
+    display: inline-block;
 }
 
 .formRow input ~ label {
@@ -133,4 +138,12 @@ body {
 .formRow input:valid ~ label {
     margin-top: -5.5rem;
     font-size: 1.2rem;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
 }
