@@ -20,7 +20,10 @@ router.get('/', async (req, res) => {
 router.get('/addpost', (req, res) => {
     const { isLoggedIn, uname, uid } = req;
 
-    res.render('addpost', { loggedIn: isLoggedIn, username: uname });
+    if(isLoggedIn)
+        res.render('addpost', { loggedIn: isLoggedIn, username: uname });
+    else
+        res.redirect('/login');
 });
 
 router.get('/login', (req, res) => {

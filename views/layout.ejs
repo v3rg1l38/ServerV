@@ -17,6 +17,7 @@
                 <li><a href="/login">Log In</a></li>
             <% } %>
             <% if(typeof loggedIn !== 'undefined' && loggedIn) { %>
+                <li><a href="/addpost">Add Post</a></li>
                 <li><a href="/logout">Log Out</a></li>
                 <li><span style="color: blue; pointer-events: none;"><%= username %></span></li>
             <% } %>
