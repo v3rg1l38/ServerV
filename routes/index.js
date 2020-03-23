@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
             const success = await loginSys.createSession(user);
 
             if(success)
-                return res.render('index', { loggedIn: true, username: user_name });
+                return res.redirect('/');
             else
                 return res.render('login', { rspMsg: 'Something went wrong!' });
         }
