@@ -147,11 +147,19 @@ body {
     display: inline;
 }
 
+.note-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .note-box {
     display: flex;
     flex-flow: column;
     border: 2px solid lightcoral;
-    max-width: 25%;
+    max-width: 30%;
+    width: 100%;
+    margin: 2rem 0;
 
     &-title {
         background: brown;
@@ -169,6 +177,12 @@ body {
         i {
             border-right: 1px solid lightcoral;
             padding: 0 1rem;
+        }
+
+        a {
+            display: flex;
+            width: 100%;
+            text-decoration: none;
         }
     }
 
