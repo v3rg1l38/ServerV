@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const loginSys = require('../controllers/LoginController');
+const logger = require('../config/logger');
 
 router.get('/', async (req, res) => {
     const { isLoggedIn, uname } = req;
@@ -25,8 +26,27 @@ router.post('/register', async (req, res) => {
 
      if(user_password !== user_password1)
         res.render('register', { loggedIn: req.isLoggedIn, rspMsg: 'Passwords do not match' });
-    else
-        res.render('register', { loggedIn: req.isLoggedIn, rspMsg: 'You have been registered' });
+    else {
+        const userInfo = {
+            user_name,
+            user_password,
+            user_mail
+        };
+
+        try {
+            const success = await loginSys.register(userInfo);
+
+            if(success)
+                res.render('register', { loggedIn: false, rspMsg: 'You have been successfully registered!' });
+            else
+                res.render('register', { loggedIn: false, rspMsg: 'Something went wrong' });
+        }
+        catch(err) {
+            const date = new Date();
+            logger.serverLog(`${err} : ${date.toString()}`);
+            res.render('register', { loggedIn: false, rspMsg: `${err}` });
+        }
+    }
 });
 
 module.exports = router;

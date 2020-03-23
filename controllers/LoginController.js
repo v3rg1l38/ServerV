@@ -52,8 +52,8 @@ const login = async (userInfo) => {
         return false;
 
     try {
-        username = username.replace(/[\'\\]/g, '');
-        const dbSearch = await db.sendQuery(`SELECT * FROM Users WHERE user_name = '${username}'`);
+        const clear_username = username.replace(/[\'\\]/g, '');
+        const dbSearch = await db.sendQuery(`SELECT * FROM Users WHERE user_name = '${clear_username}'`);
 
         if(dbSearch.length === 0)
             return false;
@@ -84,10 +84,10 @@ const register = async (userInfo) => {
 
     try {
         const hashedPassword = await bcrypt.hash(user_password, salt_rounds);
-        user_name = user_name.replace(/[\'\\]/g, '');
+        const clear_user_name = user_name.replace(/[\'\\]/g, '');
         await db.sendQuery(`INSERT INTO Users (user_name, user_mail, user_password)
         VALUES (
-            '${user_name}', '${user_mail}', '${hashedPassword}'
+            '${clear_user_name}', '${user_mail}', '${hashedPassword}'
         )`);
 
         return true;
