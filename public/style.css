@@ -215,7 +215,7 @@ body {
 }
 
 .note-box-row:nth-child(odd) {
-  background: lightcyan;
+  background: #50e7e7;
 }
 
 .note-box-row:nth-child(odd):hover {
@@ -223,7 +223,7 @@ body {
 }
 
 .note-box-row:nth-child(even) {
-  background: lightgreen;
+  background: #5880b4;
 }
 
 .note-box-row:nth-child(even):hover {
@@ -232,5 +232,26 @@ body {
 
 .note-box-list {
   list-style: none;
+}
+
+.message-box {
+  border: 2px solid #f33636;
+  background: lightcoral;
+  padding: .5rem 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  width: 40%;
+}
+
+.message-box h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  display: inline;
+}
+
+.message-box p {
+  cursor: pointer;
+  display: inline;
+  margin-left: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

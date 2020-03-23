@@ -1,5 +1,6 @@
-<div class="message-box">
-    <% if(typeof rspMsg !== 'undefined') { %>
+<% if(typeof rspMsg !== 'undefined') { %>
+<div id="mess" class="message-box">
         <h1><%= rspMsg %></h1>
-    <% } %>
+        <p id="close-message">X</p>
 </div>
+<% } %>

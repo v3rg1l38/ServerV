@@ -187,7 +187,7 @@ body {
     }
 
     &-row:nth-child(odd) {
-        background: lightcyan;
+        background: rgb(80, 231, 231);
 
         &:hover {
             background-color: greenyellow;
@@ -195,7 +195,7 @@ body {
     }
 
     &-row:nth-child(even) {
-        background: lightgreen;
+        background: rgb(88, 128, 180);
 
         &:hover {
             background-color: greenyellow;
@@ -204,5 +204,26 @@ body {
 
     &-list {
         list-style: none;
+    }
+}
+
+.message-box {
+    border: 2px solid rgb(243, 54, 54);
+    background: lightcoral;
+    padding: .5rem 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 40%;
+
+    h1 {
+        font-weight: 300;
+        font-size: 2rem;
+        display: inline;
+    }
+    
+    p {
+        cursor: pointer;
+        display: inline;
+        margin-left: 5rem;
     }
 }
