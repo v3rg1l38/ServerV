@@ -274,4 +274,33 @@ body {
   width: 100%;
   margin-left: 5rem;
 }
+
+.addpost-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 90vh;
+}
+
+.addpost-box form {
+  width: 60%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+.addpost-box form input {
+  width: 40rem;
+}
+
+.addpost-box form textarea {
+  width: 40rem;
+  height: 10rem;
+}
 /*# sourceMappingURL=style.css.map */

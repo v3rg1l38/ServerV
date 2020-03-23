@@ -17,6 +17,12 @@ router.get('/', async (req, res) => {
         res.redirect('/login');
 });
 
+router.get('/addpost', (req, res) => {
+    const { isLoggedIn, uname, uid } = req;
+
+    res.render('addpost', { loggedIn: isLoggedIn, username: uname });
+});
+
 router.get('/login', (req, res) => {
     const { isLoggedIn } = req;
     if(!isLoggedIn)
