@@ -12,10 +12,10 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="#">Bugs</a></li>
-            <% if(!loggedIn) { %>
+            <% if(typeof loggedIn === 'undefined' || !loggedIn) { %>
                 <li><a href="/login">Log In</a></li>
             <% } %>
-            <% if(loggedIn) { %>
+            <% if(typeof loggedIn !== 'undefined' && loggedIn) { %>
                 <li><span style="color: blue; pointer-events: none;">Hello <%= username %></span></li>
             <% } %>
         </ul>

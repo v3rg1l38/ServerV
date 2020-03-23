@@ -6,7 +6,7 @@ const logger = require('../config/logger');
 router.get('/', async (req, res) => {
     const { isLoggedIn, uname } = req;
 
-    res.render('index', { loggedIn:  isLoggedIn, username: uname });
+    res.render('index');
 });
 
 router.get('/login', (req, res) => {
@@ -14,7 +14,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/register', (req, res) => {
-    res.render('register', { loggedIn: false });
+    res.render('register', { loggedIn: req.isLoggedIn, username: req.username });
 });
 
 router.post('/register', async (req, res) => {
