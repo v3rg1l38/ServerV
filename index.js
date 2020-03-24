@@ -31,12 +31,14 @@ app.use('**', require('./routes/404'));
 
 const PORT = process.env.PORT || 5000;
 
-if(process.env.NODE_ENV === 'testing')
+if(process.env.NODE_ENV === 'testing') 
     app.listen(PORT, console.log('Server started on port ' + PORT));
-else
+else {
+    const fs = require('fs');
     https.createServer({
         key: fs.readFileSync('/root/certs/arianadeetz.key'),
         cert: fs.readFileSync('/root/certs/arianadeetz.csr')
      }, app)
      .listen(PORT, () => { console.log(`Server started on port ${PORT}`)});
+}
  
