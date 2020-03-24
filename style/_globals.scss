@@ -82,6 +82,7 @@ body {
 #nav-logo {
     color: $navbar-logo-color;
     margin-left: 1.5rem;
+    pointer-events: none;
 
     @include mobile() {
         font-size: 2rem;

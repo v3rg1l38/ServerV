@@ -97,6 +97,7 @@ body {
 #nav-logo {
   color: red;
   margin-left: 1.5rem;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -323,21 +324,19 @@ body {
 
 @media only screen and (max-width: 768px) {
   .message-box {
-    width: 60%;
+    width: 70%;
   }
 }
 
 .message-box h1 {
   font-weight: 300;
   font-size: 2rem;
-  max-width: 95%;
   width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
   .message-box h1 {
     font-size: .8rem;
-    max-width: 100%;
   }
 }
 
@@ -509,11 +508,24 @@ body {
   border: 2px solid lightcoral;
 }
 
+@media only screen and (max-width: 768px) {
+  .ticket-box-card {
+    margin: 2rem 0;
+  }
+}
+
 .ticket-box-title {
   text-align: center;
   background: brown;
   border-bottom: 2px solid lightcoral;
   padding: .5rem 0;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .ticket-box-title {
+    font-size: 1.5rem;
+  }
 }
 
 .ticket-box-body {
@@ -522,6 +534,14 @@ body {
   background: darkgrey;
   border-bottom: 2px solid lightcoral;
   white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .ticket-box-body {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .ticket-box-info {
@@ -536,6 +556,14 @@ body {
   color: #333333;
   padding: .5rem 3rem;
   background: lawngreen;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .ticket-box-owner {
+    padding: .8rem 1rem;
+    font-size: .8rem;
+  }
 }
 
 .ticket-box-status {
@@ -544,5 +572,13 @@ body {
   color: blue;
   text-transform: uppercase;
   background: grey;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .ticket-box-status {
+    padding: .8rem 1rem;
+    font-size: .8rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,11 @@
 <div class="addpost-box">
-    <form>
+    <form method="POST" action="/ticket/add">
         <div class="formRow">
             <input class="inputText" type="text" name="ticket_title" required>
             <label>Ticket Title</label>
         </div>
         <div class="formRow block">
-            <textarea class="inputText" cols="60" rows="45" placeholder="Ticket body" required></textarea>
+            <textarea class="inputText" cols="60" rows="45" name="ticket_body" placeholder="Ticket body" required></textarea>
         </div>
         <input class="inputBtn" type="submit" value="Add Post">
     </form>

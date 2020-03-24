@@ -29,4 +29,12 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+
+router.post('/add', async (req, res) => {
+    const { ticket_title, ticket_body } = req.body;
+    const { isLoggedIn, uid, uname } = req;
+
+    res.redirect('/');
+});
+
 module.exports = router;

@@ -123,6 +123,10 @@
         width: 90%;
         background: lightblue;
         border: 2px solid lightcoral;
+
+        @include mobile() {
+            margin: 2rem 0;
+        }
     }
 
     &-title {
@@ -130,6 +134,11 @@
         background: brown;
         border-bottom: 2px solid lightcoral;
         padding: .5rem 0;
+        pointer-events: none;
+
+        @include mobile() {
+            font-size: 1.5rem;
+        }
     }
 
     &-body {
@@ -138,6 +147,10 @@
         background: darkgrey;
         border-bottom: 2px solid lightcoral;
         white-space: pre-wrap;
+
+        @include mobile() {
+            height: fit-content;
+        }
     }
 
     &-info {
@@ -150,6 +163,12 @@
         color: #333333;
         padding: .5rem 3rem;
         background: lawngreen;
+        pointer-events: none;
+
+        @include mobile() {
+            padding: .8rem 1rem;
+            font-size: .8rem;
+        }
     }
 
     &-status {
@@ -158,5 +177,11 @@
         color: blue;
         text-transform: uppercase;
         background: grey;
+        pointer-events: none;
+
+        @include mobile() {
+            padding: .8rem 1rem;
+            font-size: .8rem;
+        }
     }
 }
