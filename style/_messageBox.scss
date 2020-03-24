@@ -1,0 +1,22 @@
+.message-box {
+    border: 2px solid rgb(243, 54, 54);
+    background: lightcoral;
+    padding: .5rem 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    width: 40%;
+
+    h1 {
+        font-weight: 300;
+        font-size: 2rem;
+        max-width: 95%;
+        width: 100%;
+    }
+    
+    p {
+        cursor: pointer;
+        max-width: 5%;
+        width: 100%;
+        margin-left: 5rem;
+    }
+}

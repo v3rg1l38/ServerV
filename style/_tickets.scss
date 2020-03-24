@@ -1,0 +1,94 @@
+.note-box {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid lightcoral;
+    max-width: 40%;
+    width: 100%;
+    margin: 2rem 0;
+    max-height: 500px;
+    overflow-y: auto;
+
+    &-title {
+        background: brown;
+        text-align: center;
+    }
+
+    &-row {
+        border: 1px solid lightcoral;
+        display: flex;
+        justify-content: space-evenly;
+
+        p {
+            max-width: 60%;
+            width: 100%;
+            text-align: left;
+        }
+
+        i {
+            border-right: 1px solid lightcoral;
+            text-align: center;
+            padding: 0 1rem;
+            max-width: 10%;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
+        a {
+            display: flex;
+            text-align: center;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        span {
+            padding: 0 1rem;
+            text-align: center;
+            max-width: 15%;
+            width: 100%;
+            border-left: 1px solid lightcoral;
+            color: rgb(5, 5, 4);
+            font-size: 1.2rem;
+        }
+    }
+
+    &-row:nth-child(odd) {
+        background: rgb(80, 231, 231);
+
+        &:hover {
+            background-color: greenyellow;
+        }
+    }
+
+    &-row:nth-child(even) {
+        background: rgb(88, 128, 180);
+
+        &:hover {
+            background-color: greenyellow;
+        }
+    }
+
+    &-list {
+        list-style: none;
+    }
+}
+
+.new-note {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: rgb(238, 70, 70);
+    padding: 1rem;
+    border-radius: 100%;
+    transition: background .5s ease-in-out;
+    z-index: 9;
+
+    a {
+        color: white;
+        font-size: 4rem;
+        cursor: default;
+    }
+
+    &:hover {
+        background: rgb(0, 132, 255);
+    }
+}

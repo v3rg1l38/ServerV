@@ -1,0 +1,22 @@
+.addpost-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+    form {
+        width: 60%;
+        text-align: center;
+        background: rgba(0, 0, 0, .6);
+        padding: 2rem;
+
+        input {
+            width: 40rem;
+        }
+
+        textarea {
+            width: 40rem;
+            height: 10rem;
+        }
+    }
+}

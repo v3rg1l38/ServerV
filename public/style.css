@@ -17,6 +17,54 @@ a {
   text-decoration: none;
 }
 
+form {
+  display: inline-block;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: black;
+  padding: 1rem 0;
+}
+
+nav ul {
+  margin-right: 2rem;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+  color: #0068df;
+  border-bottom: 2px solid #0068df;
+}
+
+nav h1 {
+  color: white;
+  margin-left: 2rem;
+  pointer-events: none;
+}
+
+body {
+  background: grey;
+}
+
+#nav-logo {
+  color: red;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,8 +75,36 @@ a {
           flex-flow: column;
 }
 
-form {
-  display: inline-block;
+.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  min-height: 90vh;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.note-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .inputText {
@@ -67,68 +143,11 @@ form {
   background: #13e713;
 }
 
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: black;
-  padding: 1rem 0;
-}
-
-nav ul {
-  margin-right: 2rem;
-}
-
-nav h1 {
-  color: white;
-  margin-left: 2rem;
-  pointer-events: none;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 1.5rem;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 1.5rem;
-}
-
-nav ul li a:hover {
-  color: #0068df;
-  border-bottom: 2px solid #0068df;
-}
-
-body {
-  background: grey;
-}
-
 .formBlack {
   background: black;
   padding: 6rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
-}
-
-#nav-logo {
-  color: red;
-}
-
-.center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.box {
-  min-height: 90vh;
 }
 
 .formRow {
@@ -152,23 +171,58 @@ body {
   font-size: 1.2rem;
 }
 
-.block {
-  display: block;
-}
-
-.inline {
-  display: inline;
-}
-
-.note-container {
+.addpost-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 90vh;
+}
+
+.addpost-box form {
+  width: 60%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+.addpost-box form input {
+  width: 40rem;
+}
+
+.addpost-box form textarea {
+  width: 40rem;
+  height: 10rem;
+}
+
+.message-box {
+  border: 2px solid #f33636;
+  background: lightcoral;
+  padding: .5rem 2rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+}
+
+.message-box h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  max-width: 95%;
+  width: 100%;
+}
+
+.message-box p {
+  cursor: pointer;
+  max-width: 5%;
+  width: 100%;
+  margin-left: 5rem;
 }
 
 .note-box {
@@ -256,60 +310,6 @@ body {
   list-style: none;
 }
 
-.message-box {
-  border: 2px solid #f33636;
-  background: lightcoral;
-  padding: .5rem 2rem;
-  margin-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 40%;
-}
-
-.message-box h1 {
-  font-weight: 300;
-  font-size: 2rem;
-  max-width: 95%;
-  width: 100%;
-}
-
-.message-box p {
-  cursor: pointer;
-  max-width: 5%;
-  width: 100%;
-  margin-left: 5rem;
-}
-
-.addpost-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 90vh;
-}
-
-.addpost-box form {
-  width: 60%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-}
-
-.addpost-box form input {
-  width: 40rem;
-}
-
-.addpost-box form textarea {
-  width: 40rem;
-  height: 10rem;
-}
-
 .new-note {
   position: absolute;
   bottom: 5%;
@@ -319,11 +319,12 @@ body {
   border-radius: 100%;
   -webkit-transition: background .5s ease-in-out;
   transition: background .5s ease-in-out;
+  z-index: 9;
 }
 
 .new-note a {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: default;
 }
 

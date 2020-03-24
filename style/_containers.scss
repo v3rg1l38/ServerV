@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    min-height: 90vh;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.note-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

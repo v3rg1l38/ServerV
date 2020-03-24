@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    padding: 1rem 0;
+
+    ul {
+        margin-right: 2rem;
+
+        li {
+            display: inline;
+            margin: 0 1.5rem;
+
+            a {
+                color: white;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: rgb(0, 104, 223);
+                    border-bottom: 2px solid rgb(0, 104, 223);
+                }
+            }
+        }
+    }
+
+    h1 {
+        color: white;
+        margin-left: 2rem;
+        pointer-events: none;
+    }
+}
+
+body {
+    background: grey;
+}
+
+#nav-logo {
+    color: red;
+}
