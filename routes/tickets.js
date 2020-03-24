@@ -34,7 +34,31 @@ router.post('/add', async (req, res) => {
     const { ticket_title, ticket_body } = req.body;
     const { isLoggedIn, uid, uname } = req;
 
-    res.redirect('/');
+    if(!isLoggedIn)
+        return res.redirect('/login');
+    
+    if(!ticket_title || !ticket_body)
+        return res.render('addticket', { loggedIn: isLoggedIn, username: uname, rspMsg: 'You have to fill in all data!' });
+
+    try {
+        const ticketInfo = {
+            ticket_title,
+            ticket_body,
+            uid
+        }
+
+        const success = await ticketSys.addTicket(ticketInfo);
+
+        if(success)
+            res.render('addticket', { loggedIn: isLoggedIn, username: uname, rspMsg: 'Ticket has been added!' });
+        else
+            res.render('addticket', { loggedIn: isLoggedIn, username: uname, rspMsg: 'Something went wrong!' });
+    }
+    catch(err) {
+        const date = new Date();
+        logger.serverLog(`${err} : ${date.toString()}`);
+        res.render('addticket', { loggedIn: isLoggedIn, username: uname, rspMsg: 'Something went wrong!' });
+    }
 });
 
 module.exports = router;
