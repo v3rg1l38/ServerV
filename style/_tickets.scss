@@ -130,6 +130,7 @@
         border-right: 2px solid lightcoral;
         color: #333333;
         padding: .5rem 3rem;
+        background: lawngreen;
     }
 
     &-status {
@@ -137,5 +138,6 @@
         padding: .5rem 3rem;
         color: blue;
         text-transform: uppercase;
+        background: grey;
     }
 }

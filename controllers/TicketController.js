@@ -6,10 +6,20 @@ const getTickets = async (userID) => {
         return false;
 
     try {
-        const tickets = await db.sendQuery(`
-        SELECT Users.user_name, Ticket.ticket_title, Ticket.ticket_id 
-        FROM Ticket JOIN Users
-        ON Ticket.ticket_owner = Users.user_id WHERE Users.user_id = ${userID}`);
+        let tickets;
+        
+        if(userID !== 'All') {
+            tickets = await db.sendQuery(`
+            SELECT Users.user_name, Ticket.ticket_title, Ticket.ticket_id 
+            FROM Ticket JOIN Users
+            ON Ticket.ticket_owner = Users.user_id WHERE Users.user_id = ${userID}`);
+        }
+        else {
+            tickets = await db.sendQuery(`
+            SELECT Users.user_name, Ticket.ticket_title, Ticket.ticket_id 
+            FROM Ticket JOIN Users
+            ON Ticket.ticket_owner = Users.user_id`);            
+        }
 
         if(tickets.length === 0)
             return false;

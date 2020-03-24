@@ -5,13 +5,24 @@ const logger = require('../config/logger');
 const ticketSystem = require('../controllers/TicketController');
 
 router.get('/', async (req, res) => {
-    const { isLoggedIn, uname, uid } = req;
+    const { isLoggedIn, uname, uid, role } = req;
 
     if(isLoggedIn) {
-        const tickets = await ticketSystem.getTickets(uid);
-
-        res.render('index', { loggedIn: isLoggedIn, username: uname,
+        try {
+            let tickets;
+            if(role !== 'ADMIN')
+                tickets = await ticketSystem.getTickets(uid);
+            else
+                tickets = await ticketSystem.getTickets('All');
+                
+            res.render('index', { loggedIn: isLoggedIn, username: uname,
             tickets });
+        }
+        catch(err) {
+            const date = new Date();
+            logger.serverLog(`${err} : ${date.toString()}`);
+            res.redirect('/');
+        }
     }
     else
         res.redirect('/login');
