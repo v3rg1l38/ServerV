@@ -1,3 +1,5 @@
+@import '../style/mobile';
+
 .addpost-box {
     display: flex;
     justify-content: center;
@@ -10,13 +12,28 @@
         background: rgba(0, 0, 0, .6);
         padding: 2rem;
 
+        @include mobile() {
+            width: 80%;
+            padding: 1rem;
+        }
+
         input {
             width: 40rem;
+
+            @include mobile() {
+                width: 100%;
+            }
         }
 
         textarea {
             width: 40rem;
             height: 10rem;
+
+            @include mobile() {
+                width: 80%;
+                height: 5rem;
+                font-size: 1rem;
+            }
         }
     }
 }

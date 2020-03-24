@@ -1,3 +1,5 @@
+@import '../style/mobile';
+
 .note-box {
     display: flex;
     flex-flow: column;
@@ -7,6 +9,10 @@
     margin: 2rem 0;
     max-height: 500px;
     overflow-y: auto;
+
+    @include mobile() {
+        max-width: 90%;
+    }
 
     &-title {
         background: $ticket-title-color;
@@ -22,6 +28,10 @@
             max-width: 60%;
             width: 100%;
             text-align: left;
+
+            @include mobile() {
+                font-size: 1rem;
+            }
         }
 
         i {
@@ -31,6 +41,10 @@
             max-width: 10%;
             width: 100%;
             font-size: 1.2rem;
+
+            @include mobile() {
+                font-size: 1rem;
+            }
         }
 
         a {
@@ -48,6 +62,11 @@
             border-left: 1px solid $ticket-border-color;
             color: rgb(5, 5, 4);
             font-size: 1.2rem;
+
+            @include mobile() {
+                font-size: 1rem;
+                overflow: hidden;
+            }
         }
     }
 

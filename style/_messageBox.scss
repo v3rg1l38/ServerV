@@ -1,3 +1,5 @@
+@import '../style/mobile';
+
 .message-box {
     border: 2px solid rgb(243, 54, 54);
     background: lightcoral;
@@ -6,11 +8,20 @@
     display: flex;
     width: 40%;
 
+    @include mobile() {
+        width: 60%;
+    }
+
     h1 {
         font-weight: 300;
         font-size: 2rem;
         max-width: 95%;
         width: 100%;
+
+        @include mobile() {
+            font-size: .8rem;
+            max-width: 100%;
+        }
     }
     
     p {
@@ -18,5 +29,10 @@
         max-width: 5%;
         width: 100%;
         margin-left: 5rem;
+
+        @include mobile() {
+            font-size: 1rem;
+            max-width: 2%;
+        }
     }
 }

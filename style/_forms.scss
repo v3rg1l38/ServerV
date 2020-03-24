@@ -1,3 +1,5 @@
+@import '../style/mobile';
+
 .inputText {
     display: inline-block;
     height: 2rem;
@@ -8,6 +10,11 @@
     background: transparent;
     font-size: 1.5rem;
     color: white;
+
+    @include mobile() {
+        width: 80%;
+        font-size: 1rem;
+    }
 }
 
 .inputText ~ label {
@@ -29,6 +36,11 @@
     border-radius: 20px;
     width: 100%;
     font-size: 1.2rem;
+
+    @include mobile() {
+        font-size: .8rem;
+        width: 80%;
+    }
 }
 
 .inputBtn:hover, .inputBtn:focus {
@@ -39,6 +51,18 @@
     padding: 6rem;
     background: rgba(0, 0, 0, .6);
     border-radius: 20px;
+
+    @include mobile() {
+        padding: 0;
+        text-align: center;
+        width: 90%;
+    }
+}
+
+.formTitle {
+    margin-top: 1.5rem;
+    text-align: center; 
+    color: white;
 }
 
 .formRow {
@@ -50,14 +74,27 @@
     position: absolute;
     margin-top: -4rem;
     pointer-events: none;
+
+    @include mobile() {
+        margin-left: 2rem;
+        font-size: 1rem;
+    }
 }
 
 .formRow input:focus ~ label {
     margin-top: -5.5rem;
     font-size: 1.2rem;
+
+    @include mobile() {
+        font-size: 1rem;
+    }
 }
 
 .formRow input:valid ~ label {
     margin-top: -5.5rem;
     font-size: 1.2rem;
+
+    @include mobile() {
+        font-size: 1rem;
+    }
 }

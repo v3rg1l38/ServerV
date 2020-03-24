@@ -1,3 +1,5 @@
+@import '../style/mobile';
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,10 @@ h1 {
 p {
     font-size: $paragraph-size;
     color: $paragraph-color;
+
+    @include mobile() {
+        font-size: .8rem;
+    }
 }
 
 a {
@@ -27,6 +33,10 @@ nav {
     background: $navbar-color;
     padding: $navbar-padding;
 
+    @include mobile() {
+        flex-flow: column;
+    }
+
     ul {
         margin-right: 2rem;
 
@@ -34,13 +44,31 @@ nav {
             display: inline;
             margin: 0 1.5rem;
 
+            @include mobile() {
+                margin: 0 .5rem;
+            }
+
             a {
                 color: white;
                 font-size: $navbar-link-size;
 
+                @include mobile() {
+                    font-size: .8rem;
+                }
+
                 &:hover {
                     color: $navbar-link-hover;
                     border-bottom: 2px solid $navbar-link-hover;
+                }
+            }
+
+            span {
+                color: blue; 
+                pointer-events: none; 
+                font-size: 1.5rem;
+
+                @include mobile() {
+                    font-size: .8rem;
                 }
             }
         }
@@ -54,4 +82,10 @@ body {
 #nav-logo {
     color: $navbar-logo-color;
     margin-left: 1.5rem;
+
+    @include mobile() {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: .4rem;
+    }
 }
