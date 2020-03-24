@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
                 tickets = await ticketSystem.getTickets(uid);
             else
                 tickets = await ticketSystem.getTickets('All');
-                
+
             res.render('index', { loggedIn: isLoggedIn, username: uname,
             tickets });
         }
@@ -28,11 +28,11 @@ router.get('/', async (req, res) => {
         res.redirect('/login');
 });
 
-router.get('/addpost', (req, res) => {
+router.get('/addticket', (req, res) => {
     const { isLoggedIn, uname, uid } = req;
 
     if(isLoggedIn)
-        res.render('addpost', { loggedIn: isLoggedIn, username: uname });
+        res.render('addticket', { loggedIn: isLoggedIn, username: uname });
     else
         res.redirect('/login');
 });
