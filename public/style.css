@@ -108,6 +108,17 @@ body {
   }
 }
 
+footer {
+  background: black;
+  text-align: center;
+  color: white;
+}
+
+footer h1 {
+  padding: 2rem 0;
+  font-weight: 300;
+}
+
 .inputText {
   display: inline-block;
   height: 2rem;
@@ -259,6 +270,10 @@ body {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-height: 90vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .addpost-box {
@@ -367,7 +382,9 @@ body {
   width: 100%;
   margin: 2rem 0;
   max-height: 500px;
+  min-height: 500px;
   overflow-y: auto;
+  background: #f89279;
 }
 
 @media only screen and (max-width: 768px) {
@@ -465,7 +482,7 @@ body {
 }
 
 .new-note {
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   right: 5%;
   background: #ee4646;

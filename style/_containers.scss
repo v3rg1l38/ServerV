@@ -24,4 +24,6 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    min-height: 90vh;
+    height: fit-content;
 }
