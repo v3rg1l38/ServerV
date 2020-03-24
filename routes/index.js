@@ -5,7 +5,7 @@ const logger = require('../config/logger');
 const ticketSystem = require('../controllers/TicketController');
 
 router.get('/', async (req, res) => {
-    const { isLoggedIn, uname, uid } = req;
+    const { isLoggedIn, uname, uid, role } = req;
 
     if(isLoggedIn) {
         const tickets = await ticketSystem.getTickets(uid);
@@ -46,11 +46,12 @@ router.post('/login', async (req, res) => {
     };
 
     try {
-        const userID = await loginSys.login(user);
+        const userInfo = await loginSys.login(user);
         
-        if(userID) {
-            user.uid = userID;
+        if(userInfo) {
+            user.uid = userInfo.user_id;
             user.sessionID = req.sessionID;
+            user.role = userInfo.role;
 
             const success = await loginSys.createSession(user);
 

@@ -14,6 +14,7 @@ const isLoggedIn = async (req, res, next) => {
             req.isLoggedIn = true;
             req.uname   = result[0].sid;
             req.uid = result[0].uid;
+            req.role = result[0].role;
             next();
         }
         else {
@@ -32,10 +33,10 @@ const isLoggedIn = async (req, res, next) => {
 const createSession = async (userInfo) => {
     if(userInfo) {
         try {
-            const { user_name, sessionID, uid } = userInfo;
-            await db.sendQuery(`INSERT INTO Session (sid, skey, uid) VALUES ('${user_name}', 
-            '${sessionID}', ${uid}) 
-            ON DUPLICATE KEY UPDATE skey = '${sessionID}'`);
+            const { user_name, sessionID, uid, role } = userInfo;
+            await db.sendQuery(`INSERT INTO Session (sid, skey, uid, role) VALUES ('${user_name}', 
+            '${sessionID}', ${uid}, '${role}') 
+            ON DUPLICATE KEY UPDATE skey = '${sessionID}', role = '${role}'`);
             return true;
         }
         catch(err) {
@@ -62,7 +63,7 @@ const login = async (userInfo) => {
         const match = await bcrypt.compare(user_password, dbSearch[0].user_password);
 
         if(match)
-            return dbSearch[0].user_id;
+            return { user_id: dbSearch[0].user_id, role: dbSearch[0].user_role };
         else
             return false;
     }
