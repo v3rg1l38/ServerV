@@ -7,6 +7,8 @@ const ticketSystem = require('../controllers/TicketController');
 router.get('/', async (req, res) => {
     const { isLoggedIn, uname, uid, role } = req;
 
+    res.render('viewTicket');
+
     if(isLoggedIn) {
         const tickets = await ticketSystem.getTickets(uid);
 

@@ -23,6 +23,25 @@ const getTickets = async (userID) => {
     }
 }
 
+const getTicket = async (ticketID) => {
+    if(!ticketID)
+        return false;
+
+    try {
+        const ticket = await db.sendQuery(`SELECT * FROM Ticket WHERE ticket_id = ${ticketID}`);
+        
+        if(ticket.length > 0)
+            return ticket[0];
+        else
+            return false;
+    }
+    catch(err) {
+        const date = new Date();
+        logger.serverLog(`${err} : ${date.toString()}`);
+        return false;
+    }
+}
+
 const addTicket = async (ticketInfo) => {
     if(!ticketInfo)
         return false;
@@ -51,5 +70,6 @@ const addTicket = async (ticketInfo) => {
 
 module.exports = {
     getTickets,
-    addTicket
+    addTicket,
+    getTicket
 };

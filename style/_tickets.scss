@@ -77,9 +77,9 @@
     bottom: 5%;
     right: 5%;
     background: $addTicket-button-color;
-    padding: 1rem;
+    padding: .5rem 1.5rem;
     border-radius: 100%;
-    transition: background .5s ease-in-out;
+    transition: background .2s ease-in-out;
     z-index: 9;
 
     a {
@@ -89,6 +89,49 @@
     }
 
     &:hover {
-        background: addTicket-button-hover;
+        background: $addTicket-button-hover;
+    }
+}
+
+.ticket-box {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-card {
+        height: fit-content;
+        width: 90%;
+        background: lightblue;
+        border: 2px solid lightcoral;
+    }
+
+    &-title {
+        text-align: center;
+        background: brown;
+        border-bottom: 2px solid lightcoral;
+    }
+
+    &-body {
+        height: 30rem;
+        overflow-y: auto;
+        background: darkgrey;
+        border-bottom: 2px solid lightcoral;
+        white-space: pre-wrap;
+    }
+
+    &-info {
+        position: relative;
+        display: flex;
+    }
+
+    &-owner {
+        border-right: 2px solid lightcoral;
+        padding: .5rem 3rem;
+    }
+
+    &-status {
+        border-right: 2px solid lightcoral;
+        padding: .5rem 3rem;
     }
 }

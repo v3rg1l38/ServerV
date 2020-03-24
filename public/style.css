@@ -310,10 +310,10 @@ body {
   bottom: 5%;
   right: 5%;
   background: #ee4646;
-  padding: 1rem;
+  padding: .5rem 1.5rem;
   border-radius: 100%;
-  -webkit-transition: background .5s ease-in-out;
-  transition: background .5s ease-in-out;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
   z-index: 9;
 }
 
@@ -324,6 +324,59 @@ body {
 }
 
 .new-note:hover {
-  background: addTicket-button-hover;
+  background: #0084ff;
+}
+
+.ticket-box {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ticket-box-card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  background: lightblue;
+  border: 2px solid lightcoral;
+}
+
+.ticket-box-title {
+  text-align: center;
+  background: brown;
+  border-bottom: 2px solid lightcoral;
+}
+
+.ticket-box-body {
+  height: 30rem;
+  overflow-y: auto;
+  background: darkgrey;
+  border-bottom: 2px solid lightcoral;
+  white-space: pre-wrap;
+}
+
+.ticket-box-info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ticket-box-owner {
+  border-right: 2px solid lightcoral;
+  padding: .5rem 3rem;
+}
+
+.ticket-box-status {
+  border-right: 2px solid lightcoral;
+  padding: .5rem 3rem;
 }
 /*# sourceMappingURL=style.css.map */
