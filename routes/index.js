@@ -5,9 +5,7 @@ const logger = require('../config/logger');
 const ticketSystem = require('../controllers/TicketController');
 
 router.get('/', async (req, res) => {
-    const { isLoggedIn, uname, uid, role } = req;
-
-    res.render('viewTicket');
+    const { isLoggedIn, uname, uid } = req;
 
     if(isLoggedIn) {
         const tickets = await ticketSystem.getTickets(uid);

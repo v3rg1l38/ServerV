@@ -1,10 +1,12 @@
-<div class="ticket-box">
-    <div class="ticket-box-card">
-        <h1 class="ticket-box-title">Ticket title</h1>
-        <p class="ticket-box-body">Ticket Body</p>
-        <div class="ticket-box-info">
-            <h2 class="ticket-box-owner">v3rg1l38</h2>
-            <h2 class="ticket-box-status">Open</h2>
+<% if(typeof ticketInfo !== 'undefined') { %>
+    <div class="ticket-box">
+        <div class="ticket-box-card">
+            <h1 class="ticket-box-title"><%= ticketInfo.ticket_title %></h1>
+            <p class="ticket-box-body"><%= ticketInfo.ticket_body %></p>
+            <div class="ticket-box-info">
+                <h2 class="ticket-box-owner"><%= ticketInfo.user_name %></h2>
+                <h2 class="ticket-box-status"><%= ticketInfo.ticket_status %></h2>
+            </div>
         </div>
     </div>
-</div>
+<% } %>

@@ -28,7 +28,10 @@ const getTicket = async (ticketID) => {
         return false;
 
     try {
-        const ticket = await db.sendQuery(`SELECT * FROM Ticket WHERE ticket_id = ${ticketID}`);
+        const ticket = await db.sendQuery(`SELECT Ticket.ticket_id, Ticket.ticket_title, Ticket.ticket_body, Ticket.ticket_status,
+        Ticket.ticket_owner, Users.user_name
+        FROM Ticket JOIN Users ON Ticket.ticket_owner = Users.user_id
+         WHERE ticket_id = ${ticketID}`);
         
         if(ticket.length > 0)
             return ticket[0];
