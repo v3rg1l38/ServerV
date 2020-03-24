@@ -3,6 +3,7 @@ const router = express.Router();
 const loginSys = require('../controllers/LoginController');
 const logger = require('../config/logger');
 const ticketSystem = require('../controllers/TicketController');
+const db = require('../config/db');
 
 router.get('/', async (req, res) => {
     const { isLoggedIn, uname, uid, role } = req;
@@ -103,6 +104,12 @@ router.post('/register', async (req, res) => {
         };
 
         try {
+            const clear_username = user_name.replace(/[\'\\]/g, '');
+            const userExist = await db.sendQuery(`SELECT user_name FROM Users WHERE user_name = '${clear_username}'`);
+
+            if(userExist.length !== 0)
+                return res.render('register', { rspMsg: 'User already exist!' });
+
             const success = await loginSys.register(userInfo);
 
             if(success)
