@@ -9,12 +9,12 @@
     overflow-y: auto;
 
     &-title {
-        background: brown;
+        background: $ticket-title-color;
         text-align: center;
     }
 
     &-row {
-        border: 1px solid lightcoral;
+        border: 1px solid $ticket-border-color;
         display: flex;
         justify-content: space-evenly;
 
@@ -25,7 +25,7 @@
         }
 
         i {
-            border-right: 1px solid lightcoral;
+            border-right: 1px solid $ticket-border-color;
             text-align: center;
             padding: 0 1rem;
             max-width: 10%;
@@ -45,25 +45,25 @@
             text-align: center;
             max-width: 15%;
             width: 100%;
-            border-left: 1px solid lightcoral;
+            border-left: 1px solid $ticket-border-color;
             color: rgb(5, 5, 4);
             font-size: 1.2rem;
         }
     }
 
     &-row:nth-child(odd) {
-        background: rgb(80, 231, 231);
+        background: $odd-row-color;
 
         &:hover {
-            background-color: greenyellow;
+            background-color: $ticket-row-hover;
         }
     }
 
     &-row:nth-child(even) {
-        background: rgb(88, 128, 180);
+        background: $even-row-color;
 
         &:hover {
-            background-color: greenyellow;
+            background-color: $ticket-row-hover;
         }
     }
 
@@ -76,7 +76,7 @@
     position: absolute;
     bottom: 5%;
     right: 5%;
-    background: rgb(238, 70, 70);
+    background: $addTicket-button-color;
     padding: 1rem;
     border-radius: 100%;
     transition: background .5s ease-in-out;
@@ -89,6 +89,6 @@
     }
 
     &:hover {
-        background: rgb(0, 132, 255);
+        background: addTicket-button-hover;
     }
 }

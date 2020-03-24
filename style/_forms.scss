@@ -3,10 +3,11 @@
     height: 2rem;
     margin: 2rem 0;
     border: none;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid $inputText-border-color;
     width: 20rem;
     background: transparent;
     font-size: 1.5rem;
+    color: white;
 }
 
 .inputText ~ label {
@@ -14,16 +15,16 @@
 }
 
 .inputText:focus {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid $inputText-border-focus;
 }
 
 .inputText:valid {
-    border-bottom: 2px solid rgb(19, 231, 19);
+    border-bottom: 2px solid $inputText-border-valid;
 }
 
 .inputBtn {
     border: none;
-    background: rgb(19, 128, 165);
+    background: $form-submit-button;
     padding: .5rem 2rem;
     border-radius: 20px;
     width: 100%;
@@ -31,11 +32,10 @@
 }
 
 .inputBtn:hover, .inputBtn:focus {
-    background: rgb(19, 231, 19);
+    background: $inputText-border-valid;
 }
 
 .formBlack {
-    background: black;
     padding: 6rem;
     background: rgba(0, 0, 0, .6);
     border-radius: 20px;

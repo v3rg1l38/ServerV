@@ -51,18 +51,76 @@ nav ul li a:hover {
   border-bottom: 2px solid #0068df;
 }
 
-nav h1 {
-  color: white;
-  margin-left: 2rem;
-  pointer-events: none;
-}
-
 body {
   background: grey;
 }
 
 #nav-logo {
   color: red;
+}
+
+.inputText {
+  display: inline-block;
+  height: 2rem;
+  margin: 2rem 0;
+  border: none;
+  border-bottom: 2px solid blue;
+  width: 20rem;
+  background: transparent;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.inputText ~ label {
+  display: block;
+}
+
+.inputText:focus {
+  border-bottom: 2px solid red;
+}
+
+.inputText:valid {
+  border-bottom: 2px solid #13e713;
+}
+
+.inputBtn {
+  border: none;
+  background: #1380a5;
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.inputBtn:hover, .inputBtn:focus {
+  background: #13e713;
+}
+
+.formBlack {
+  padding: 6rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.formRow {
+  display: inline-block;
+}
+
+.formRow input ~ label {
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: -4rem;
+  pointer-events: none;
+}
+
+.formRow input:focus ~ label {
+  margin-top: -5.5rem;
+  font-size: 1.2rem;
+}
+
+.formRow input:valid ~ label {
+  margin-top: -5.5rem;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -105,70 +163,6 @@ body {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.inputText {
-  display: inline-block;
-  height: 2rem;
-  margin: 2rem 0;
-  border: none;
-  border-bottom: 2px solid blue;
-  width: 20rem;
-  background: transparent;
-  font-size: 1.5rem;
-}
-
-.inputText ~ label {
-  display: block;
-}
-
-.inputText:focus {
-  border-bottom: 2px solid red;
-}
-
-.inputText:valid {
-  border-bottom: 2px solid #13e713;
-}
-
-.inputBtn {
-  border: none;
-  background: #1380a5;
-  padding: .5rem 2rem;
-  border-radius: 20px;
-  width: 100%;
-  font-size: 1.2rem;
-}
-
-.inputBtn:hover, .inputBtn:focus {
-  background: #13e713;
-}
-
-.formBlack {
-  background: black;
-  padding: 6rem;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-}
-
-.formRow {
-  display: inline-block;
-}
-
-.formRow input ~ label {
-  font-size: 1.5rem;
-  position: absolute;
-  margin-top: -4rem;
-  pointer-events: none;
-}
-
-.formRow input:focus ~ label {
-  margin-top: -5.5rem;
-  font-size: 1.2rem;
-}
-
-.formRow input:valid ~ label {
-  margin-top: -5.5rem;
-  font-size: 1.2rem;
 }
 
 .addpost-box {
@@ -329,6 +323,6 @@ body {
 }
 
 .new-note:hover {
-  background: #0084ff;
+  background: addTicket-button-hover;
 }
 /*# sourceMappingURL=style.css.map */
