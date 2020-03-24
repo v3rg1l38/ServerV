@@ -2,7 +2,7 @@
     <div class="note-box">
         <h2 class="note-box-title">Tickets</h2>
         <ul class="note-box-list">
-            <% if(typeof tickets !== 'undefined') { %>
+            <% if(typeof tickets !== 'undefined' && tickets.length > 0) { %>
                 <% tickets.forEach(el => { %>
                  <li class="note-box-row">
                      <a href="/ticket/<%= el.ticket_id %>">
