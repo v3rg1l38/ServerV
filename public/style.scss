@@ -157,7 +157,7 @@ body {
     display: flex;
     flex-flow: column;
     border: 2px solid lightcoral;
-    max-width: 30%;
+    max-width: 40%;
     width: 100%;
     margin: 2rem 0;
     max-height: 500px;
@@ -174,29 +174,35 @@ body {
         justify-content: space-evenly;
 
         p {
-            margin-left: 1.5rem;
             max-width: 60%;
             width: 100%;
+            text-align: left;
         }
 
         i {
             border-right: 1px solid lightcoral;
+            text-align: center;
             padding: 0 1rem;
             max-width: 10%;
             width: 100%;
+            font-size: 1.2rem;
         }
 
         a {
             display: flex;
+            text-align: center;
             width: 100%;
             text-decoration: none;
         }
 
         span {
             padding: 0 1rem;
+            text-align: center;
             max-width: 15%;
             width: 100%;
             border-left: 1px solid lightcoral;
+            color: rgb(5, 5, 4);
+            font-size: 1.2rem;
         }
     }
 
@@ -264,5 +270,25 @@ body {
             width: 40rem;
             height: 10rem;
         }
+    }
+}
+
+.new-note {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: rgb(238, 70, 70);
+    padding: 1rem;
+    border-radius: 100%;
+    transition: background .5s ease-in-out;
+
+    a {
+        color: white;
+        font-size: 3rem;
+        cursor: default;
+    }
+
+    &:hover {
+        background: rgb(0, 132, 255);
     }
 }

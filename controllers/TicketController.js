@@ -7,7 +7,7 @@ const getTickets = async (userID) => {
 
     try {
         const tickets = await db.sendQuery(`
-        SELECT Users.user_name, Ticket.ticket_title 
+        SELECT Users.user_name, Ticket.ticket_title, Ticket.ticket_id 
         FROM Ticket JOIN Users
         ON Ticket.ticket_owner = Users.user_id WHERE Users.user_id = ${userID}`);
 

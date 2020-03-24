@@ -25,6 +25,7 @@ app.use(cors());
 
 app.use(loginCheck);
 app.use('/', require('./routes/index'));
+app.use('/ticket', require('./routes/tickets'));
 app.use('**', require('./routes/404'));
 
 const PORT = process.env.PORT || 5000;
