@@ -51,6 +51,7 @@
     padding: 6rem;
     background: rgba(0, 0, 0, .6);
     border-radius: 20px;
+    margin: 2rem 0;
 
     @include mobile() {
         padding: 0;
