@@ -6,6 +6,10 @@
             <div class="ticket-box-info">
                 <h2 class="ticket-box-owner"><%= ticketInfo.user_name %></h2>
                 <h2 class="ticket-box-status"><%= ticketInfo.ticket_status %></h2>
+                <form method="POST" action="/ticket/delete">
+                    <input type="text" value="<%= ticketInfo.ticket_id %>" name="tickID" style="display: none;">
+                    <input class="inputBtn" type="submit" value="Delete">
+                </form>
             </div>
         </div>
     </div>

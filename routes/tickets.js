@@ -29,6 +29,10 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.post('/delete', (req, res) => {
+    console.log(req.body);
+    res.redirect('/');
+});
 
 router.post('/add', async (req, res) => {
     const { ticket_title, ticket_body } = req.body;
