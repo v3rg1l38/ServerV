@@ -1,6 +1,6 @@
 {
     "env": {
         "PORT": 8000,
-        "NODE_ENV": "testing"
+        "NODE_ENV": "production"
     }
 }
