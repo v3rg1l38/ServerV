@@ -17,7 +17,7 @@ router.get('/:id', async (req, res) => {
                 return res.redirect('/');
     
             if(uid === ticketInfo.ticket_owner || role === 'ADMIN')
-                res.render('viewTicket', { loggedIn: isLoggedIn, username: uname, ticketInfo});
+                res.render('viewTicket', { loggedIn: isLoggedIn, username: uname, ticketInfo, role});
             else
                 res.redirect('/');
         }
@@ -29,9 +29,24 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/delete', (req, res) => {
-    console.log(req.body);
-    res.redirect('/');
+router.post('/delete', async (req, res) => {
+    const { ticketID } = req.body;
+    const { role, isLoggedIn } = req;
+
+    if(ticketID && role === 'ADMIN' && isLoggedIn) {
+        try {
+            const success = await ticketSys.deleteTicket(ticketID);
+            res.redirect('/');
+        }
+        catch(err) {
+            const date = new Date();
+            logger.serverLog(`${err} : ${date.toString()}`);
+            console.error(`${err} : ${date.toString()}`);
+        }
+    }
+    else {
+        res.redirect('/');
+    }
 });
 
 router.post('/add', async (req, res) => {

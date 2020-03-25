@@ -231,6 +231,15 @@ footer h1 {
   }
 }
 
+.deleteBtn {
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+  background: #da1305;
+  border: none;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;

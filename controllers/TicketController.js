@@ -81,8 +81,25 @@ const addTicket = async (ticketInfo) => {
     }
 }
 
+const deleteTicket = async (ticketID) => {
+    if(!ticketID)
+        return false;
+
+    try {
+        await db.sendQuery(`DELETE FROM Ticket WHERE ticket_id = ${ticketID}`);
+        return true;
+    }
+    catch(err) {
+        const date = new Date();
+        logger.serverLog(`${err} : ${date.toString()}`);
+        console.error(`${err} : ${date.toString()}`);
+        return false;
+    }
+}
+
 module.exports = {
     getTickets,
     addTicket,
-    getTicket
+    getTicket,
+    deleteTicket
 };
