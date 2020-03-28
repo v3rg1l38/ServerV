@@ -6,7 +6,7 @@
                 <% tickets.forEach(el => { %>
                  <li class="note-box-row">
                      <a href="/ticket/<%= el.ticket_id %>">
-                    <i><%= el.ticket_id %></i>
+                    <i><%= el.ticket_status %></i>
                     <p><%= el.ticket_title %></p>
                     <span><%= el.user_name %></span>
                     </a>
