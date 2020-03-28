@@ -3,14 +3,14 @@
 .note-box {
     display: flex;
     flex-flow: column;
-    border: 2px solid lightcoral;
+    border: 2px solid $ticket-border-color;
     max-width: 40%;
     width: 100%;
     margin: 2rem 0;
     max-height: 500px;
     min-height: 500px;
     overflow-y: auto;
-    background: rgb(248, 146, 121);
+    background: $ticket-background-color;
 
     @include mobile() {
         max-width: 90%;
@@ -43,6 +43,7 @@
             max-width: 10%;
             width: 100%;
             font-size: 1.2rem;
+            color: $ticket-status-color;
 
             @include mobile() {
                 font-size: 1rem;
@@ -62,7 +63,7 @@
             max-width: 15%;
             width: 100%;
             border-left: 1px solid $ticket-border-color;
-            color: rgb(5, 5, 4);
+            color: $ticket-owner-color;
             font-size: 1.2rem;
 
             @include mobile() {
@@ -124,7 +125,7 @@
         height: fit-content;
         width: 90%;
         background: lightblue;
-        border: 2px solid lightcoral;
+        border: 2px solid $ticket-border-color;
 
         @include mobile() {
             margin: 2rem 0;
@@ -134,7 +135,7 @@
     &-title {
         text-align: center;
         background: brown;
-        border-bottom: 2px solid lightcoral;
+        border-bottom: 2px solid $ticket-border-color;
         padding: .5rem 0;
         pointer-events: none;
 
@@ -146,8 +147,8 @@
     &-body {
         height: 30rem;
         overflow-y: auto;
-        background: darkgrey;
-        border-bottom: 2px solid lightcoral;
+        background: $ticket-body-color;
+        border-bottom: 2px solid $ticket-border-color;
         white-space: pre-wrap;
 
         @include mobile() {
@@ -158,10 +159,11 @@
     &-info {
         position: relative;
         display: flex;
+        background: $ticket-info-color;
     }
 
     &-owner {
-        border-right: 2px solid lightcoral;
+        border-right: 2px solid $ticket-border-color;
         color: #333333;
         padding: .5rem 3rem;
         background: lawngreen;
@@ -174,7 +176,7 @@
     }
 
     &-status {
-        border-right: 2px solid lightcoral;
+        border-right: 2px solid $ticket-border-color;
         padding: .5rem 3rem;
         color: blue;
         text-transform: uppercase;
