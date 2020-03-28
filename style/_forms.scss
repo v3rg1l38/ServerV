@@ -66,40 +66,40 @@
     color: white;
 }
 
-.formRow {
-    display: inline-block;
-}
+// .formRow {
+//     display: inline-block;
+// }
 
-.formRow input ~ label {
-    font-size: 1.5rem;
-    position: absolute;
-    margin-top: -4rem;
-    pointer-events: none;
-    color: $label-color;
+// .formRow input ~ label {
+//     font-size: 1.5rem;
+//     position: absolute;
+//     margin-top: -4rem;
+//     pointer-events: none;
+//     color: $label-color;
 
-    @include mobile() {
-        margin-left: 2rem;
-        font-size: 1rem;
-    }
-}
+//     @include mobile() {
+//         margin-left: 2rem;
+//         font-size: 1rem;
+//     }
+// }
 
-.formRow input:focus ~ label {
-    margin-top: -5.5rem;
-    font-size: 1.2rem;
+// .formRow input:focus ~ label {
+//     margin-top: -5.5rem;
+//     font-size: 1.2rem;
 
-    @include mobile() {
-        font-size: 1rem;
-    }
-}
+//     @include mobile() {
+//         font-size: 1rem;
+//     }
+// }
 
-.formRow input:valid ~ label {
-    margin-top: -5.5rem;
-    font-size: 1.2rem;
+// .formRow input:valid ~ label {
+//     margin-top: -5.5rem;
+//     font-size: 1.2rem;
 
-    @include mobile() {
-        font-size: 1rem;
-    }
-}
+//     @include mobile() {
+//         font-size: 1rem;
+//     }
+// }
 
 .deleteBtn {
     padding: 2px 2rem;
@@ -109,4 +109,77 @@
     border: none;
     font-size: .8rem;
     text-transform: uppercase;
+}
+
+.darkForm {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height: 500px;
+    width: 400px;
+    background: rgb(24, 21, 21);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+
+    label {
+        color: white;
+    }
+}
+
+.formRow {
+    width: 100%;    
+    margin: 1rem 0;
+
+    label {
+        margin-left: 6rem;
+    }
+}
+
+.formInput {
+    display: block;
+    margin: .5rem auto 0 auto;
+    width: 60%;
+    background: rgb(24, 21, 21);
+    color: rgb(6, 98, 202);
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    height: 2.5rem;
+    -webkit-box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgb(73, 71, 71);
+    -moz-box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgba(73,71,71,1);
+    box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgba(73,71,71,1);
+}
+
+.formSubmit {
+    width: 60%;
+    border-radius: 20px;
+    border: none;
+    background: rgb(24, 21, 21);
+    margin: 1.5rem 0;
+    height: 2rem;
+    color: rgb(6, 98, 202);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+
+    &:hover, &:focus {
+        -webkit-box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgb(0, 0, 0);
+        -moz-box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgba(0,0,0,1);
+        box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgba(0,0,0,1);
+    }
+}
+
+.registerLink {
+    color: red;
+    text-decoration: none;
+    margin-top: .5rem;
+}
+
+.formText {
+    font-size: 1.5rem;
+    color: rgb(73, 71, 71);
 }

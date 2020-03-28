@@ -1,17 +1,18 @@
 <div class="container center box">
     <%- include ('./partials/messages') %>
-    <form class="loginForm" method="POST" action="/login">
+    <form class="darkForm" method="POST" action="/login">
         <h1 class="formTitle">Login</h1>
-        <div class="formRow block">
-            <input class="inputText" type="text" name="user_name" required>
+        <div class="formRow">
             <label>Username</label>
+            <input class="formInput" type="text" name="user_name" required>
         </div>
-        <div class="formRow block">
-            <input class="inputText" type="password" name="user_password" required>
+        <div class="formRow">
             <label>Password</label>
+            <input class="formInput" type="password" name="user_password" required>
         </div>
-        <input class="inputBtn" type="submit" value="Submit">
-        <p style="color: #e4e1e1; margin: 1rem 0;">Don't have account?</p><a style="color: #e4e1e1;" href="/register">Register</a>
+        <input class="formSubmit" type="submit" value="Submit">
+        <p class="formText">Don't have account?</p>
+        <a class="registerLink" href="/register">Register</a>
     </form>
 </div>
 

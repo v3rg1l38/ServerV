@@ -91,7 +91,7 @@ nav ul li span {
 }
 
 body {
-  background: #0c0c0e;
+  background: #181515;
 }
 
 #nav-logo {
@@ -198,47 +198,6 @@ footer h1 {
   color: white;
 }
 
-.formRow {
-  display: inline-block;
-}
-
-.formRow input ~ label {
-  font-size: 1.5rem;
-  position: absolute;
-  margin-top: -4rem;
-  pointer-events: none;
-  color: #e4e1e1;
-}
-
-@media only screen and (max-width: 768px) {
-  .formRow input ~ label {
-    margin-left: 2rem;
-    font-size: 1rem;
-  }
-}
-
-.formRow input:focus ~ label {
-  margin-top: -5.5rem;
-  font-size: 1.2rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .formRow input:focus ~ label {
-    font-size: 1rem;
-  }
-}
-
-.formRow input:valid ~ label {
-  margin-top: -5.5rem;
-  font-size: 1.2rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .formRow input:valid ~ label {
-    font-size: 1rem;
-  }
-}
-
 .deleteBtn {
   padding: 2px 2rem;
   margin-left: 2rem;
@@ -247,6 +206,84 @@ footer h1 {
   border: none;
   font-size: .8rem;
   text-transform: uppercase;
+}
+
+.darkForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  height: 500px;
+  width: 400px;
+  background: #181515;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+}
+
+.darkForm label {
+  color: white;
+}
+
+.formRow {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.formRow label {
+  margin-left: 6rem;
+}
+
+.formInput {
+  display: block;
+  margin: .5rem auto 0 auto;
+  width: 60%;
+  background: #181515;
+  color: #0662ca;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  border-radius: 20px;
+  height: 2.5rem;
+  -webkit-box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+  box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+}
+
+.formSubmit {
+  width: 60%;
+  border-radius: 20px;
+  border: none;
+  background: #181515;
+  margin: 1.5rem 0;
+  height: 2rem;
+  color: #0662ca;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+}
+
+.formSubmit:hover, .formSubmit:focus {
+  -webkit-box-shadow: inset -2px -2px 5px 0px #494747, inset 2px 2px 5px 0px black;
+  box-shadow: inset -2px -2px 5px 0px #494747, inset 2px 2px 5px 0px black;
+}
+
+.registerLink {
+  color: red;
+  text-decoration: none;
+  margin-top: .5rem;
+}
+
+.formText {
+  font-size: 1.5rem;
+  color: #494747;
 }
 
 .container {
