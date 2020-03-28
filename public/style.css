@@ -315,7 +315,8 @@ footer h1 {
 .addpost-box form {
   width: 60%;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(48, 47, 47, 0.6);
+  border-radius: 20px;
   padding: 2rem;
 }
 
@@ -401,6 +402,7 @@ footer h1 {
       -ms-flex-flow: column;
           flex-flow: column;
   border: 2px solid #006c8d;
+  border-radius: 20px;
   max-width: 40%;
   width: 100%;
   margin: 2rem 0;
@@ -545,8 +547,11 @@ footer h1 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 90%;
+  max-width: 90%;
+  overflow: auto;
+  width: 100%;
   background: lightblue;
+  border-radius: 20px;
   border: 2px solid #006c8d;
 }
 
@@ -560,8 +565,6 @@ footer h1 {
   text-align: center;
   background: #4e4c4c;
   border-bottom: 2px solid #006c8d;
-  padding: .5rem 0;
-  pointer-events: none;
   color: #e7e7e5;
 }
 
@@ -588,7 +591,6 @@ footer h1 {
 }
 
 .ticket-box-info {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

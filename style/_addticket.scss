@@ -10,7 +10,8 @@
     form {
         width: 60%;
         text-align: center;
-        background: rgba(0, 0, 0, .6);
+        background: rgba(48, 47, 47, 0.6);
+        border-radius: 20px;
         padding: 2rem;
 
         @include mobile() {
