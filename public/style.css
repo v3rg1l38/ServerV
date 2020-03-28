@@ -177,15 +177,15 @@ footer h1 {
   background: #13e713;
 }
 
-.formBlack {
+.loginForm {
   padding: 6rem;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(44, 40, 40, 0.6);
   border-radius: 20px;
   margin: 2rem 0;
 }
 
 @media only screen and (max-width: 768px) {
-  .formBlack {
+  .loginForm {
     padding: 0;
     text-align: center;
     width: 90%;
@@ -240,7 +240,7 @@ footer h1 {
 }
 
 .deleteBtn {
-  padding: .5rem 2rem;
+  padding: 2px 2rem;
   margin-left: 2rem;
   border-radius: 20px;
   background: #a30d03;
@@ -409,7 +409,7 @@ footer h1 {
   max-height: 500px;
   min-height: 500px;
   overflow-y: auto;
-  background: #0c0c0e;
+  background: #3c3c3f;
 }
 
 @media only screen and (max-width: 768px) {
@@ -603,7 +603,7 @@ footer h1 {
 .ticket-box-owner {
   border-right: 2px solid #006c8d;
   color: #0293d6;
-  padding: .5rem 3rem;
+  padding: 0 3rem;
   background: #494b47;
   pointer-events: none;
 }
@@ -617,7 +617,7 @@ footer h1 {
 
 .ticket-box-status {
   border-right: 2px solid #006c8d;
-  padding: .5rem 3rem;
+  padding: 0 3rem;
   color: #0d0d79;
   text-transform: uppercase;
   background: #494b47;

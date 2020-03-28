@@ -169,7 +169,7 @@
     &-owner {
         border-right: 2px solid $ticket-border-color;
         color: #0293d6;
-        padding: .5rem 3rem;
+        padding: 0 3rem;
         background: rgb(73, 75, 71);
         pointer-events: none;
 
@@ -181,7 +181,7 @@
 
     &-status {
         border-right: 2px solid $ticket-border-color;
-        padding: .5rem 3rem;
+        padding: 0 3rem;
         color: rgb(13, 13, 121);
         text-transform: uppercase;
         background: rgb(73, 75, 71);
