@@ -1,7 +1,7 @@
 {
     "env": {
         "PORT": 8000,
-        "REGISTRATION": false,
+        "REGISTRATION": true,
         "NODE_ENV": "production"
     }
 }
