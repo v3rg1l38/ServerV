@@ -75,6 +75,7 @@
     position: absolute;
     margin-top: -4rem;
     pointer-events: none;
+    color: $label-color;
 
     @include mobile() {
         margin-left: 2rem;
