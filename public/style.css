@@ -440,7 +440,6 @@ footer h1 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  border: 2px solid #006c8d;
   border-radius: 20px;
   max-width: 40%;
   width: 100%;
@@ -448,7 +447,9 @@ footer h1 {
   max-height: 500px;
   min-height: 500px;
   overflow-y: auto;
-  background: #3c3c3f;
+  background: #181515;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
 }
 
 @media only screen and (max-width: 768px) {
@@ -458,19 +459,24 @@ footer h1 {
 }
 
 .note-box-title {
-  background: #4e4c4c;
+  background: #181515;
   text-align: center;
-  color: #e7e7e5;
+  color: #0e71c2;
+  -webkit-box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+  box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+  padding: .5rem 0;
 }
 
 .note-box-row {
-  border: 1px solid #006c8d;
+  -webkit-box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+  box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: .5rem 0;
 }
 
 .note-box-row p {
@@ -486,7 +492,6 @@ footer h1 {
 }
 
 .note-box-row i {
-  border-right: 1px solid #006c8d;
   text-align: center;
   padding: 0 1rem;
   max-width: 10%;
@@ -515,7 +520,6 @@ footer h1 {
   text-align: center;
   max-width: 15%;
   width: 100%;
-  border-left: 1px solid #006c8d;
   color: #e4e1e1;
   font-size: 1.2rem;
 }
@@ -528,19 +532,19 @@ footer h1 {
 }
 
 .note-box-row:nth-child(odd) {
-  background: #1d5f5f;
+  background: #252525;
 }
 
 .note-box-row:nth-child(odd):hover {
-  background-color: #0e71c2;
+  background: #0e71c2;
 }
 
 .note-box-row:nth-child(even) {
-  background: #1e3047;
+  background: #181c22;
 }
 
 .note-box-row:nth-child(even):hover {
-  background-color: #0e71c2;
+  background: #0e71c2;
 }
 
 .note-box-list {
