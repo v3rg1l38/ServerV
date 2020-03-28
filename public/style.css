@@ -224,14 +224,17 @@ footer h1 {
           align-items: center;
   border-radius: 30px;
   height: 500px;
-  width: 400px;
+  width: 20%;
   background: #181515;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
 }
 
-.darkForm label {
-  color: white;
+@media only screen and (max-width: 768px) {
+  .darkForm {
+    width: 90%;
+    height: 100%;
+  }
 }
 
 .formRow {
@@ -240,6 +243,7 @@ footer h1 {
 }
 
 .formRow label {
+  color: white;
   margin-left: 6rem;
 }
 
@@ -284,6 +288,22 @@ footer h1 {
 .formText {
   font-size: 1.5rem;
   color: #494747;
+}
+
+.formTextArea {
+  display: block;
+  text-align: left;
+  margin: .5rem auto 0 auto;
+  width: 60%;
+  background: #181515;
+  color: #0662ca;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  height: 6.5rem;
+  padding: 1rem;
+  -webkit-box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+  box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
 }
 
 .container {
@@ -349,41 +369,23 @@ footer h1 {
   min-height: 90vh;
 }
 
-.addpost-box form {
-  width: 60%;
-  text-align: center;
-  background: rgba(48, 47, 47, 0.6);
-  border-radius: 20px;
-  padding: 2rem;
+.addpost-box .darkForm {
+  width: 70%;
 }
 
 @media only screen and (max-width: 768px) {
-  .addpost-box form {
-    width: 80%;
-    padding: 1rem;
+  .addpost-box .darkForm {
+    width: 90%;
   }
 }
 
-.addpost-box form input {
-  width: 40rem;
+.addpost-box .darkForm .formRow label {
+  margin-left: 18rem;
 }
 
 @media only screen and (max-width: 768px) {
-  .addpost-box form input {
-    width: 100%;
-  }
-}
-
-.addpost-box form textarea {
-  width: 40rem;
-  height: 10rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .addpost-box form textarea {
-    width: 80%;
-    height: 5rem;
-    font-size: 1rem;
+  .addpost-box .darkForm .formRow label {
+    margin-left: 3rem;
   }
 }
 

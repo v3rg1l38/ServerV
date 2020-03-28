@@ -7,35 +7,20 @@
     flex-flow: column;
     min-height: 90vh;
 
-    form {
-        width: 60%;
-        text-align: center;
-        background: rgba(48, 47, 47, 0.6);
-        border-radius: 20px;
-        padding: 2rem;
+    .darkForm {
+        width: 70%;
 
         @include mobile() {
-            width: 80%;
-            padding: 1rem;
+            width: 90%;
         }
 
-        input {
-            width: 40rem;
+        .formRow label {
+            margin-left: 18rem;
 
             @include mobile() {
-                width: 100%;
-            }
-        }
-
-        textarea {
-            width: 40rem;
-            height: 10rem;
-
-            @include mobile() {
-                width: 80%;
-                height: 5rem;
-                font-size: 1rem;
+                margin-left: 3rem;
             }
         }
     }
+    
 }

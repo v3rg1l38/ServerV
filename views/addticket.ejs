@@ -1,13 +1,14 @@
 <div class="addpost-box">
     <%- include ('./partials/messages') %>
-    <form method="POST" action="/ticket/add">
+    <form class="darkForm" method="POST" action="/ticket/add">
         <div class="formRow">
-            <input class="inputText" type="text" name="ticket_title" required>
             <label>Ticket Title</label>
+            <input class="formInput" type="text" name="ticket_title" required>
         </div>
-        <div class="formRow block">
-            <textarea class="inputText" cols="60" rows="45" name="ticket_body" placeholder="Ticket body" required></textarea>
+        <div class="formRow">
+            <label>Ticket Body</label>
+            <textarea class="formTextArea" cols="60" rows="45" name="ticket_body" required></textarea>
         </div>
-        <input class="inputBtn" type="submit" value="Add Post">
+        <input class="formSubmit" type="submit" value="Add Post">
     </form>
 </div>

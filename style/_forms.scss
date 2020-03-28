@@ -118,14 +118,15 @@
     align-items: center;
     border-radius: 30px;
     height: 500px;
-    width: 400px;
+    width: 20%;
     background: rgb(24, 21, 21);
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
 
-    label {
-        color: white;
+    @include mobile() {
+        width: 90%;
+        height: 100%;
     }
 }
 
@@ -134,6 +135,7 @@
     margin: 1rem 0;
 
     label {
+        color: white;
         margin-left: 6rem;
     }
 }
@@ -182,4 +184,21 @@
 .formText {
     font-size: 1.5rem;
     color: rgb(73, 71, 71);
+}
+
+.formTextArea {
+    display: block;
+    text-align: left;
+    margin: .5rem auto 0 auto;
+    width: 60%;
+    background: rgb(24, 21, 21);
+    color: rgb(6, 98, 202);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    height: 6.5rem;
+    padding: 1rem;
+    -webkit-box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgb(73, 71, 71);
+    -moz-box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgba(73,71,71,1);
+    box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgba(73,71,71,1);
 }
