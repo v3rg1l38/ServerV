@@ -55,7 +55,7 @@ const login = async (userInfo) => {
 
     try {
         const clear_username = user_name.replace(/[\'\\]/g, '');
-        const dbSearch = await db.sendQuery(`SELECT * FROM Users WHERE user_name = '${clear_username}'`);
+        const dbSearch = await db.sendQuery(`SELECT * FROM Users WHERE user_name = BINARY '${clear_username}'`);
 
         if(dbSearch.length === 0)
             return false;
