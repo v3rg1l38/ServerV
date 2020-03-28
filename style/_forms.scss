@@ -47,19 +47,6 @@
     background: $inputText-border-valid;
 }
 
-.loginForm {
-    padding: 6rem;
-    background: rgba(44, 40, 40, 0.6);
-    border-radius: 20px;
-    margin: 2rem 0;
-
-    @include mobile() {
-        padding: 0;
-        text-align: center;
-        width: 90%;
-    }
-}
-
 .formTitle {
     margin-top: 1.5rem;
     text-align: center; 
@@ -126,8 +113,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    height: 500px;
-    width: 20%;
+    height: 600px;
+    width: 25%;
     background: rgb(24, 21, 21);
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
@@ -193,6 +180,7 @@
 .formText {
     font-size: 1.5rem;
     color: rgb(73, 71, 71);
+    pointer-events: none;
 }
 
 .formTextArea {
