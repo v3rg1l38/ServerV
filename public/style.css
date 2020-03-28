@@ -562,11 +562,13 @@ footer h1 {
   position: fixed;
   bottom: 5%;
   right: 5%;
-  background: #706a6a;
+  background: #181515;
   padding: 0 1rem;
   border-radius: 100%;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
   z-index: 9;
 }
 
@@ -577,7 +579,12 @@ footer h1 {
 }
 
 .new-note:hover {
-  background: #0e4981;
+  -webkit-box-shadow: inset -2px -2px 5px 0px #494747, inset 2px 2px 5px 0px black;
+  box-shadow: inset -2px -2px 5px 0px #494747, inset 2px 2px 5px 0px black;
+}
+
+.new-note:hover a {
+  color: #0e4981;
 }
 
 .ticket-box {

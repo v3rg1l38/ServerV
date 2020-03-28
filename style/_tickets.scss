@@ -111,6 +111,9 @@
     padding: 0 1rem;
     border-radius: 100%;
     transition: background .2s ease-in-out;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
     z-index: 9;
 
     a {
@@ -120,7 +123,13 @@
     }
 
     &:hover {
-        background: $addTicket-button-hover;
+        -webkit-box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgb(0, 0, 0);
+        -moz-box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgba(0,0,0,1);
+        box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgba(0,0,0,1);
+
+        a {
+            color: $addTicket-button-hover;
+        }
     }
 }
 
