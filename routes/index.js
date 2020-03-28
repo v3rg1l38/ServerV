@@ -84,10 +84,16 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/register', (req, res) => {
-    res.render('register');
+    if(process.env.REGISTRATION === true)
+        res.render('register');
+    else
+        res.redirect('/');
 });
 
 router.post('/register', async (req, res) => {
+    if(process.env.REGISTRATION === false)
+        return res.json({ message: 'Registration is disabled!' });
+
     const { user_name, 
         user_password,
         user_password1,
