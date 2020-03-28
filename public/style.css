@@ -274,7 +274,7 @@ footer h1 {
 .registerLink {
   color: red;
   text-decoration: none;
-  margin-top: .5rem;
+  margin: .5rem 0;
 }
 
 .formText {
