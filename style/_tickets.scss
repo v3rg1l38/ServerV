@@ -3,7 +3,6 @@
 .note-box {
     display: flex;
     flex-flow: column;
-    // border: 2px solid $ticket-border-color;
     border-radius: 20px;
     max-width: 40%;
     width: 100%;
@@ -21,7 +20,6 @@
     }
 
     &-title {
-        // background: $ticket-title-color;
         background: rgb(24, 21, 21);
         text-align: center;
         color: rgb(14, 113, 194);
@@ -139,7 +137,9 @@
         width: 100%;
         background: lightblue;
         border-radius: 20px;
-        border: 2px solid $ticket-border-color;
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
 
         @include mobile() {
             margin: 2rem 0;
@@ -148,9 +148,9 @@
 
     &-title {
         text-align: center;
-        background: $ticket-title-color;
-        border-bottom: 2px solid $ticket-border-color;
-        color: rgb(231, 231, 229);
+        background: $body-background-color;
+        color: rgb(14, 113, 194);
+        padding: .5rem 0;
 
         @include mobile() {
             font-size: 1.5rem;
@@ -161,8 +161,11 @@
         height: 30rem;
         overflow-y: auto;
         background: $ticket-body-color;
-        border-bottom: 2px solid $ticket-border-color;
         white-space: pre-wrap;
+        padding: .5rem;
+        -webkit-box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgb(73, 71, 71);
+        -moz-box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgba(73,71,71,1);
+        box-shadow: inset -1px -1px 5px 0px rgba(0,0,0,1), inset 1px 1px 5px 0px rgba(73,71,71,1);
 
         @include mobile() {
             height: fit-content;
@@ -173,13 +176,12 @@
         display: flex;
         align-items: center;
         background: $ticket-info-color;
+        padding: .5rem 0;
     }
 
     &-owner {
-        border-right: 2px solid $ticket-border-color;
         color: #0293d6;
         padding: 0 3rem;
-        background: rgb(73, 75, 71);
         pointer-events: none;
 
         @include mobile() {
@@ -189,11 +191,9 @@
     }
 
     &-status {
-        border-right: 2px solid $ticket-border-color;
         padding: 0 3rem;
-        color: rgb(13, 13, 121);
+        color: rgb(37, 37, 194);
         text-transform: uppercase;
-        background: rgb(73, 75, 71);
         pointer-events: none;
 
         @include mobile() {

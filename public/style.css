@@ -199,13 +199,20 @@ footer h1 {
 }
 
 .deleteBtn {
-  padding: 2px 2rem;
+  padding: .2rem 2rem;
   margin-left: 2rem;
   border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
   background: #a30d03;
   border: none;
   font-size: .8rem;
   text-transform: uppercase;
+}
+
+.deleteBtn:hover {
+  -webkit-box-shadow: inset -2px -2px 5px 0px #494747, inset 2px 2px 5px 0px black;
+  box-shadow: inset -2px -2px 5px 0px #494747, inset 2px 2px 5px 0px black;
 }
 
 .darkForm {
@@ -595,7 +602,8 @@ footer h1 {
   width: 100%;
   background: lightblue;
   border-radius: 20px;
-  border: 2px solid #006c8d;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75), -2px -2px 5px 0px #494747;
 }
 
 @media only screen and (max-width: 768px) {
@@ -606,9 +614,9 @@ footer h1 {
 
 .ticket-box-title {
   text-align: center;
-  background: #4e4c4c;
-  border-bottom: 2px solid #006c8d;
-  color: #e7e7e5;
+  background: #181515;
+  color: #0e71c2;
+  padding: .5rem 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -620,9 +628,11 @@ footer h1 {
 .ticket-box-body {
   height: 30rem;
   overflow-y: auto;
-  background: #0c0c0e;
-  border-bottom: 2px solid #006c8d;
+  background: #181515;
   white-space: pre-wrap;
+  padding: .5rem;
+  -webkit-box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
+  box-shadow: inset -1px -1px 5px 0px black, inset 1px 1px 5px 0px #494747;
 }
 
 @media only screen and (max-width: 768px) {
@@ -640,14 +650,13 @@ footer h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0c0c0e;
+  background: #181515;
+  padding: .5rem 0;
 }
 
 .ticket-box-owner {
-  border-right: 2px solid #006c8d;
   color: #0293d6;
   padding: 0 3rem;
-  background: #494b47;
   pointer-events: none;
 }
 
@@ -659,11 +668,9 @@ footer h1 {
 }
 
 .ticket-box-status {
-  border-right: 2px solid #006c8d;
   padding: 0 3rem;
-  color: #0d0d79;
+  color: #2525c2;
   text-transform: uppercase;
-  background: #494b47;
   pointer-events: none;
 }
 

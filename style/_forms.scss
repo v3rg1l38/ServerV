@@ -102,13 +102,22 @@
 // }
 
 .deleteBtn {
-    padding: 2px 2rem;
+    padding: .2rem 2rem;
     margin-left: 2rem;
     border-radius: 20px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgb(73, 71, 71);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -2px -2px 5px 0px rgba(73, 71, 71,1);
     background: rgb(163, 13, 3);
     border: none;
     font-size: .8rem;
     text-transform: uppercase;
+
+    &:hover {
+        -webkit-box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgb(0, 0, 0);
+        -moz-box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgba(0,0,0,1);
+        box-shadow: inset -2px -2px 5px 0px rgba(73,71,71,1), inset 2px 2px 5px 0px rgba(0,0,0,1);
+    }
 }
 
 .darkForm {
