@@ -34,7 +34,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: black;
+  background: #222222;
   padding: 1rem 0;
 }
 
@@ -109,14 +109,21 @@ body {
 }
 
 footer {
-  background: black;
+  background: #222222;
   text-align: center;
   color: white;
 }
 
 footer h1 {
+  pointer-events: none;
   padding: 2rem 0;
   font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.footer-signature {
+  color: red;
+  margin-left: .5rem;
 }
 
 .inputText {
@@ -233,9 +240,10 @@ footer h1 {
 }
 
 .deleteBtn {
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   margin-left: 2rem;
-  background: #da1305;
+  border-radius: 20px;
+  background: #a30d03;
   border: none;
   font-size: .8rem;
   text-transform: uppercase;
@@ -409,8 +417,9 @@ footer h1 {
 }
 
 .note-box-title {
-  background: brown;
+  background: #4e4c4c;
   text-align: center;
+  color: #e7e7e5;
 }
 
 .note-box-row {
@@ -501,8 +510,8 @@ footer h1 {
   position: fixed;
   bottom: 5%;
   right: 5%;
-  background: #ee4646;
-  padding: .5rem 1.5rem;
+  background: #706a6a;
+  padding: 0 1rem;
   border-radius: 100%;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
@@ -516,7 +525,7 @@ footer h1 {
 }
 
 .new-note:hover {
-  background: #0084ff;
+  background: #0e4981;
 }
 
 .ticket-box {
@@ -549,10 +558,11 @@ footer h1 {
 
 .ticket-box-title {
   text-align: center;
-  background: brown;
+  background: #4e4c4c;
   border-bottom: 2px solid #006c8d;
   padding: .5rem 0;
   pointer-events: none;
+  color: #e7e7e5;
 }
 
 @media only screen and (max-width: 768px) {
@@ -582,14 +592,17 @@ footer h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #0c0c0e;
 }
 
 .ticket-box-owner {
   border-right: 2px solid #006c8d;
-  color: #333333;
+  color: #0293d6;
   padding: .5rem 3rem;
-  background: lawngreen;
+  background: #494b47;
   pointer-events: none;
 }
 
@@ -603,9 +616,9 @@ footer h1 {
 .ticket-box-status {
   border-right: 2px solid #006c8d;
   padding: .5rem 3rem;
-  color: blue;
+  color: #0d0d79;
   text-transform: uppercase;
-  background: grey;
+  background: #494b47;
   pointer-events: none;
 }
 
